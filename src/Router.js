@@ -16,16 +16,16 @@ const RouterComponent = () => {
           key="splash"
           component={SplashPage}
           title="Local Sound"
+          initial
         />
-      </Scene>
-
-      <Scene key="auth">
         <Scene
-          key="login"
+          key="auth"
           component={LoginForm}
           title="Login"
         />
       </Scene>
+
+
 
     </Router>
   );
