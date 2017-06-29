@@ -1,0 +1,3 @@
+rootProject.name = 'local_sound'
+
+include ':app'
