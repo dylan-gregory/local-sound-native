@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import { Card, Button } from 'react-native-material-design';
-import { CardSection, Input, Spinner } from './common';
+// import { Card, Button } from 'react-native-material-design';
+import { Card, Button, CardSection, Input, Spinner } from './common';
 
 class SplashPage extends Component {
   onButtonPress() {
@@ -11,16 +11,18 @@ class SplashPage extends Component {
   render() {
     return (
       <Card>
-        <Text>
-          Hello!
-        </Text>
+        <CardSection>
+          <Text>
+            Hello!
+          </Text>
+        </CardSection>
 
-        <Button
-          onPress={this.onButtonPress.bind(this)}
-          overrides={{ backgroundColor: 'paperIndigo', textColor: 'paperAmber' }}
-          raised={true}
-          text="Login"
-        />
+        <CardSection>
+          <Button
+            onPress={this.onButtonPress.bind(this)}>
+              Sign In
+          </Button>
+        </CardSection>
 
       </Card>
     );
@@ -29,6 +31,11 @@ class SplashPage extends Component {
 
 export default SplashPage;
 
+
+// Button props:
+// overrides={{ backgroundColor: 'paperIndigo', textColor: 'paperAmber' }}
+// raised={true}
+// text="Login"
 
 // The ONLY color names that can be passed into RNMUI overrides:
 

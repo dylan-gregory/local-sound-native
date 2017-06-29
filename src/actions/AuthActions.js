@@ -51,5 +51,5 @@ const loginUserSuccess = (dispatch, user) => {
 
   //Will need to actually send it to profile page/user home
 
-  Actions.main();
+  Actions.user_main();
 };
