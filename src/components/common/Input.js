@@ -24,6 +24,8 @@ const Input = (props) => {
 const styles = {
   inputStyle: {
     color: '#fff',
+    borderBottomWidth: 2,
+    borderColor: '#fff',
     paddingRight: 5,
     paddingLeft: 5,
     fontSize: 18,

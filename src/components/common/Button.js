@@ -19,22 +19,37 @@ const Button = (props) => {
 const styles = {
   textStyle: {
     alignSelf: 'center',
-    color: '#fff',
+    color: '#333',
     fontSize: 16,
     fontWeight: '600',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
+    lineHeight: 20
   },
   buttonStyle: {
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#333',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#79D2CA',
-    marginLeft: 5,
-    marginRight: 5
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FAEFCC',
+    borderRadius: 2,
+    margin: 6,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    shadowColor: "black",
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 2,
+      width: 0
+    }
   }
 };
+
+// Unused styles, as of now...
+// borderWidth: 2,
+// borderColor: '#79D2CA',
+
 
 export { Button };
