@@ -7,7 +7,7 @@ import { Container, Content, Header, Footer, FooterTab, Button, Text, Card, Card
 
 class UserHome extends Component {
   onButtonPress() {
-    Actions.user_info()
+    Actions.user_info();
   }
   render() {
     return (
@@ -29,7 +29,7 @@ class UserHome extends Component {
               </Right>
             </CardItem>
             <CardItem carBody>
-              <Image source={require('../images/horseshoe.png')} style={{ height: 220, width: null, flex: 1 }} />
+              <Image source={require('../images/waves.jpeg')} style={{ height: 220, width: null, flex: 1 }} />
             </CardItem>
           </Card>
 
