@@ -44,7 +44,7 @@ class UserInfoForm extends Component {
                     onChangeText={text => this.props.userProfileUpdate({ prop: 'phone', value: text })}
                   />
                 </Item>
-                <Item floatingLabel last rounded>
+                <Item floatingLabel last regular>
                   <Label>Tell us about yourself...</Label>
                   <Input
                     value={this.props.bio}

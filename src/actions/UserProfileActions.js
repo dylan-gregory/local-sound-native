@@ -27,3 +27,14 @@ export const userProfileUpdate = ({ prop, value }) => {
 };
 
 // imgUrl, instrumentArray, genreArray, bio
+
+export const userProfileFetch = () => {
+  const { currentUser } = firebase.auth();
+
+  return (dispatch) => {
+    firebase.database().ref(`/users/${currentUser.uid}/profileInfo`)
+      .on('value', snapshot => {
+        dispatch({ type: PROFILE_FETCH_SUCCESS, payload: snapshot.val() });
+      });
+  };
+};
