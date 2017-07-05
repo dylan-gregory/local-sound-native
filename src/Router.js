@@ -3,7 +3,7 @@ import { Scene, Router, Actions } from 'react-native-router-flux';
 import SplashPage from './components/SplashPage';
 import LoginForm from './components/LoginForm';
 import UserHome from './components/UserHome';
-import UserInfo from './components/UserInfo';
+import UserInfoForm from './components/UserInfoForm';
 
 const RouterComponent = () => {
   return(
@@ -30,14 +30,14 @@ const RouterComponent = () => {
 
       <Scene key="user_main">
         <Scene
-          key="user-home"
+          key="user_home"
           component={UserHome}
           title="User Home"
           initial
         />
         <Scene
           key="user_info"
-          component={UserInfo}
+          component={UserInfoForm}
           title="User Info"
         />
       </Scene>

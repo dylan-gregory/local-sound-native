@@ -9,7 +9,6 @@ const INITIAL_STATE = {
   instrumentArray: [],
   genreArray: [],
   bio: '',
-
 };
 
 export default (state = INITIAL_STATE, action) => {
