@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { userProfileUpdate } from '../actions';
+import { userProfileCreate, userProfileUpdate } from '../actions';
 import { Container, Content, Header, Footer, FooterTab, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right, Form, Item, Input, Label } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button } from './common';
@@ -9,9 +9,17 @@ import { Button } from './common';
 class UserInfoForm extends Component {
   constructor(props){
     super(props);
-    
+
+    console.log(this.props);
+  }
+  onButtonPress() {
+    const { name, phone, bio } = this.props;
+
+    this.props.userProfileCreate({ name, phone, bio });
   }
   render() {
+
+    console.log('props', this.props.userProfileCreate);
     return (
       <Container>
         <Content>
@@ -44,7 +52,7 @@ class UserInfoForm extends Component {
                   />
                 </Item>
 
-                <Button type="submit" >
+                <Button onPress={this.onButtonPress.bind(this)} >
                   <Text>Update</Text>
                 </Button>
               </Form>
@@ -100,10 +108,11 @@ class UserInfoForm extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   const { name, phone, bio } = state.userProfileInfo;
-//
-//   return { name, phone, bio };
-// };
+const mapStateToProps = (state) => {
+  const { name, phone, bio } = state.userProfileInfo;
+  console.log('in map', state.userProfileInfo);
 
-export default connect(null, { userProfileUpdate })(UserInfoForm);
+  return { name, phone, bio };
+};
+
+export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate })(UserInfoForm);
