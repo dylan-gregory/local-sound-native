@@ -11,7 +11,7 @@ export const userProfileCreate = ({ name, phone, bio, uid }) => {
 
   return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/profileInfo`)
-      .push({ name, phone, bio })
+      .set({ name, phone, bio })
       .then(() => {
         dispatch({ type: PROFILE_CREATE });
         Actions.user_home({ type: 'reset' });

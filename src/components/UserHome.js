@@ -9,23 +9,25 @@ import { userProfileFetch } from '../actions';
 class UserHome extends Component {
   componentWillMount() {
 
-    this.props.userProfileFetch();
+      console.log('these', this.props.userProfileFetch);
 
-    this.createDataSource(this.props);
+    this.props.userProfileFetch();
+    //
+    // this.createDataSource(this.props);
   }
   componentWillReceiveProps(nextProps) {
-
-    this.createDataSource(nextProps);
+  console.log('here', nextProps.myProfileInfo);
+    // this.createDataSource(nextProps);
   }
-  createDataSource({ stuff }) {
-    console.log('stuff', stuff);
-
-    const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2
-    });
-
-    this.dataSource = ds.cloneWithRows(stuff);
-  }
+  // createDataSource({ stuff }) {
+  //   console.log('stuff', stuff);
+  //
+  //   const ds = new ListView.DataSource({
+  //     rowHasChanged: (r1, r2) => r1 !== r2
+  //   });
+  //
+  //   this.dataSource = ds.cloneWithRows(stuff);
+  // }
   onButtonPress() {
     Actions.user_info();
   }
@@ -83,11 +85,13 @@ class UserHome extends Component {
 }
 
 const mapStateToProps = state => {
-  const stuff = _.map(state.stuff, (val, uid) => {
-      return { ...val, uid };
+  const myProfileInfo = _.map(state.profileInfo, (val, prop) => {
+
+      return { val, prop };
     });
 
-  return { stuff };
+  return { myProfileInfo };
+
 };
 
-export default connect(null, { userProfileFetch })(UserHome);
+export default connect(mapStateToProps, { userProfileFetch })(UserHome);

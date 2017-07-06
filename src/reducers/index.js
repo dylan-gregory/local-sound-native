@@ -5,6 +5,6 @@ import UserProfileReducer from './UserProfileReducer';
 
 export default combineReducers({
   auth: AuthReducer,
-  userProfileInfo: UserProfileFormReducer
-
+  userProfileInfo: UserProfileFormReducer,
+  profileInfo: UserProfileReducer
 });

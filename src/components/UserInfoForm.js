@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { userProfileCreate, userProfileUpdate } from '../actions';
+import { userProfileCreate, userProfileUpdate, userProfileFetch } from '../actions';
 import { Container, Content, Header, Footer, FooterTab, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right, Form, Item, Input, Label } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button } from './common';
@@ -10,8 +10,23 @@ class UserInfoForm extends Component {
   constructor(props){
     super(props);
 
-    console.log(this.props);
   }
+  componentWillMount() {
+    this.props.userProfileFetch();
+  }
+  componentWillReceiveProps(nextProps) {
+    console.log('NextProps', nextProps);
+    // this.createDataSource(nextProps);
+  }
+  // createDataSource({ stuff }) {
+  //   console.log('stuff', stuff);
+  //
+  //   const ds = new ListView.DataSource({
+  //     rowHasChanged: (r1, r2) => r1 !== r2
+  //   });
+  //
+  //   this.dataSource = ds.cloneWithRows(stuff);
+  // }
   onButtonPress() {
     const { name, phone, bio } = this.props;
 
@@ -33,22 +48,26 @@ class UserInfoForm extends Component {
                 <Item floatingLabel>
                   <Label>Name</Label>
                   <Input
+                    type="text"
+
+                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'name', value: text })}
                     value={this.props.name}
-                    onChangeText={text => this.props.userProfileUpdate({ prop: 'name', value: text })}
                   />
                 </Item>
                 <Item floatingLabel>
                   <Label>Number</Label>
                   <Input
+                    type="text"
                     value={this.props.phone}
-                    onChangeText={text => this.props.userProfileUpdate({ prop: 'phone', value: text })}
+                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'phone', value: text })}
                   />
                 </Item>
                 <Item floatingLabel last regular>
                   <Label>Tell us about yourself...</Label>
                   <Input
+                    type="text"
                     value={this.props.bio}
-                    onChangeText={text => this.props.userProfileUpdate({ prop: 'bio', value: text })}
+                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'bio', value: text })}
                   />
                 </Item>
 
@@ -110,9 +129,8 @@ class UserInfoForm extends Component {
 
 const mapStateToProps = (state) => {
   const { name, phone, bio } = state.userProfileInfo;
-  console.log('in map', state.userProfileInfo);
 
   return { name, phone, bio };
 };
 
-export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate })(UserInfoForm);
+export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate, userProfileFetch })(UserInfoForm);
