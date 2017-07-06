@@ -9,15 +9,15 @@ import { userProfileFetch } from '../actions';
 class UserHome extends Component {
   componentWillMount() {
 
-      console.log('these', this.props.userProfileFetch);
+      console.log('these', this.props);
 
     this.props.userProfileFetch();
     //
     // this.createDataSource(this.props);
   }
   componentWillReceiveProps(nextProps) {
-  console.log('here', nextProps.myProfileInfo);
-    // this.createDataSource(nextProps);
+  console.log('here', nextProps);
+
   }
   // createDataSource({ stuff }) {
   //   console.log('stuff', stuff);
@@ -53,6 +53,14 @@ class UserHome extends Component {
             <CardItem carBody>
               <Image source={require('../images/waves.jpeg')} style={{ height: 220, width: null, flex: 1 }} />
             </CardItem>
+            <CardItem>
+              <Text>
+                Name: {this.props.name}
+                Phone: {this.props.phone}
+                Bio:{this.props.bio}
+              </Text>
+            </CardItem>
+
           </Card>
 
         </Content>
@@ -85,12 +93,14 @@ class UserHome extends Component {
 }
 
 const mapStateToProps = state => {
-  const myProfileInfo = _.map(state.profileInfo, (val, prop) => {
-
-      return { val, prop };
-    });
-
-  return { myProfileInfo };
+  const { name, phone, bio } = state.profileInfo;
+  // const myProfileInfo = _.map(state.profileInfo, (val, prop) => {
+  //
+  //     return { val, prop };
+  //   });
+  //
+  // return { myProfileInfo };
+  return { name, phone, bio };
 
 };
 

@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { userProfileCreate } from '../actions';
+import { userProfileCreate, userProfileUpdate } from '../actions';
 import { Container, Content, Header, Footer, FooterTab, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right, Form, Item, Input, Label } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button } from './common';
 import UserInfoForm from './UserInfoForm';
 
 class UserInfo extends Component {
+  componentWillMount() {
+    // _.each(this.props, (value, prop) => {
+    //   this.props.userProfileUpdate({ prop, value });
+    // });
+    // this.state = {
+    //   name: this.props.name,
+    //   phone: this.props.phone,
+    //   bio: this.props.bio
+    // };
+    // console.log('what', this.props);
+  }
   render() {
     return (
       <Container>
         <Content>
-          <Card>
-            <CardItem>
-              <UserInfoForm {...this.props} />
-            </CardItem>
-          </Card>
+          <UserInfoForm {...this.props} />
         </Content>
       </Container>
     );
@@ -24,9 +32,9 @@ class UserInfo extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, bio } = state.userProfileInfo;
+  const { name, phone, bio } = state.profileInfo;
 
   return { name, phone, bio };
 };
 
-export default connect(mapStateToProps, { userProfileCreate })(UserInfo);
+export default connect(mapStateToProps, { userProfileUpdate, userProfileCreate })(UserInfo);

@@ -6,6 +6,13 @@ import {
   PROFILE_FETCH_SUCCESS
 } from './types';
 
+export const userProfileUpdate = ({ prop, value }) => {
+  return {
+    type: PROFILE_UPDATE,
+    payload: { prop, value }
+  };
+};
+
 export const userProfileCreate = ({ name, phone, bio, uid }) => {
   const { currentUser } = firebase.auth();
 
@@ -16,13 +23,6 @@ export const userProfileCreate = ({ name, phone, bio, uid }) => {
         dispatch({ type: PROFILE_CREATE });
         Actions.user_home({ type: 'reset' });
       });
-  };
-};
-
-export const userProfileUpdate = ({ prop, value }) => {
-  return {
-    type: PROFILE_UPDATE,
-    payload: { prop, value }
   };
 };
 

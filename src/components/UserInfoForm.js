@@ -10,31 +10,30 @@ class UserInfoForm extends Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      name: this.props.name,
+      phone: this.props.phone,
+      bio: this.props.bio
+    };
+
+    console.log(this.state);
+
   }
-  componentWillMount() {
-    this.props.userProfileFetch();
-  }
-  componentWillReceiveProps(nextProps) {
-    console.log('NextProps', nextProps);
-    // this.createDataSource(nextProps);
-  }
-  // createDataSource({ stuff }) {
-  //   console.log('stuff', stuff);
+  // componentWillMount() {
+  //   this.props.userProfileFetch();
+  // }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log('NextProps', nextProps);
   //
-  //   const ds = new ListView.DataSource({
-  //     rowHasChanged: (r1, r2) => r1 !== r2
-  //   });
-  //
-  //   this.dataSource = ds.cloneWithRows(stuff);
   // }
   onButtonPress() {
-    const { name, phone, bio } = this.props;
-
-    this.props.userProfileCreate({ name, phone, bio });
+    // const { name, phone, bio } = this.props;
+    // this.props.userProfileUpdate({ prop: 'name', value: this.state.name });
+    this.props.userProfileCreate(this.state);
   }
   render() {
 
-    console.log('props', this.props.userProfileCreate);
+    console.log('props', this.state);
     return (
       <Container>
         <Content>
@@ -48,26 +47,22 @@ class UserInfoForm extends Component {
                 <Item floatingLabel>
                   <Label>Name</Label>
                   <Input
-                    type="text"
-
-                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'name', value: text })}
-                    value={this.props.name}
+                    onChangeText={(text) => this.setState({ name: text })}
+                    value={this.state.name}
                   />
                 </Item>
                 <Item floatingLabel>
                   <Label>Number</Label>
                   <Input
-                    type="text"
-                    value={this.props.phone}
-                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'phone', value: text })}
+                    value={this.state.phone}
+                    onChangeText={(text) => this.setState({ phone: text })}
                   />
                 </Item>
                 <Item floatingLabel last regular>
                   <Label>Tell us about yourself...</Label>
                   <Input
-                    type="text"
-                    value={this.props.bio}
-                    onChangeText={(text) => this.props.userProfileUpdate({ prop: 'bio', value: text })}
+                    value={this.state.bio}
+                    onChangeText={(text) => this.setState({ bio: text })}
                   />
                 </Item>
 
@@ -128,7 +123,7 @@ class UserInfoForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, bio } = state.userProfileInfo;
+  const { name, phone, bio } = state.profileInfo;
 
   return { name, phone, bio };
 };

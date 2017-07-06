@@ -15,7 +15,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case PROFILE_UPDATE:
-      return { ...state, [action.payload.prop]:action.payload.value };
+      return { ...state, [action.payload.prop]: action.payload.value };
     case PROFILE_CREATE:
       return INITIAL_STATE;
     default:
