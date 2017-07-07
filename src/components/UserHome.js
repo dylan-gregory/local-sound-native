@@ -56,11 +56,18 @@ class UserHome extends Component {
             <CardItem>
               <Text>
                 Name: {this.props.name}
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
                 Phone: {this.props.phone}
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
                 Bio:{this.props.bio}
               </Text>
             </CardItem>
-
           </Card>
 
         </Content>
@@ -81,25 +88,14 @@ class UserHome extends Component {
           </FooterTab>
         </Footer>
       </Container>
-      // <Card>
-      //   <CardSection>
-      //     <Text>
-      //       User Home, dude
-      //     </Text>
-      //   </CardSection>
-      // </Card>
+
     );
   }
 }
 
 const mapStateToProps = state => {
   const { name, phone, bio } = state.profileInfo;
-  // const myProfileInfo = _.map(state.profileInfo, (val, prop) => {
-  //
-  //     return { val, prop };
-  //   });
-  //
-  // return { myProfileInfo };
+
   return { name, phone, bio };
 
 };
