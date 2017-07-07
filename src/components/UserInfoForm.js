@@ -17,7 +17,8 @@ class UserInfoForm extends Component {
       name: this.props.name,
       phone: this.props.phone,
       bio: this.props.bio,
-      avatarSource: null
+      avatarSource: this.props.avatarSource,
+      uploadURL: this.props.downloadURL || null
     };
 
     console.log('state', this.state);
@@ -80,11 +81,18 @@ class UserInfoForm extends Component {
     const storage = firebase.storage();
     const { currentUser } = firebase.auth();
 
+    // Might want to change this back to a sessionId, but this may work to override for a new photo
+
     const uploadImage = (uri, mime = 'application/octet-stream') => {
+      console.log('uri', uri);
+
+      //////Add some UI state to throw a spinner while uploading avatar
+
+
       return new Promise((resolve, reject) => {
-        const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri
+        const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
           // const sessionId = new Date().getTime()
-          let uploadBlob = null
+          let uploadBlob = null;
           const imageRef = storage.ref('images').child(`${currentUser.uid}`);
 
           fs.readFile(uploadUri, 'base64')
@@ -110,7 +118,23 @@ class UserInfoForm extends Component {
 
     uploadImage(this.state.avatarSource.uri)
         .then(url => this.setState({ uploadURL: url }))
+        .then(() => this.props.userProfileCreate(this.state))
         .catch(error => console.log(error));
+
+        console.log('upload', this.state.uploadURL);
+    //
+    //     var bucket = firebase.storage().ref().bucket;
+    //     var firebaseUrl = "https://firebasestorage.googleapis.com/v0/b/" + bucket + "/o/";
+    //     var finalUrl = firebaseUrl + 'path%2Fto%2Fresource';
+    //     firebase.auth().currentUser.getToken()
+    //     .then((token) => {
+    //       fetch(finalUrl, {headers: {'Authorization' : 'Firebase ' + token}})
+    //       .then((response) => response.json())
+    //       .then((responseJson) => {
+    //         var downloadURL = finalUrl + "?alt=media&token=" + responseJson.downloadTokens})
+    //         console.log('download', downloadURL);
+    //       })
+
 
     //   const newPostKey = firebase.database().ref('posts').push().key
     //   const imageName = `${newPostKey}.jpg`
@@ -136,7 +160,7 @@ class UserInfoForm extends Component {
     //   console.log('Uploaded a blob or file!');
     // });
 
-    this.props.userProfileCreate(this.state);
+    // this.props.userProfileCreate(this.state);
   }
   render() {
 
@@ -177,7 +201,7 @@ class UserInfoForm extends Component {
                   <Text>Upload photo?</Text>
                 </Button>
 
-                <Image source={this.state.avatarSource} style={{ height: 20, width: 20 }} />
+                <Image source={this.state.avatarSource} style={{ height: 40, width: 60 }} />
 
                 <Button onPress={this.onButtonPress.bind(this)} >
                   <Text>Update</Text>

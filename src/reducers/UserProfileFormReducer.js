@@ -6,7 +6,8 @@ import {
 const INITIAL_STATE = {
   name: '',
   phone: '',
-  // imgUrl: '',
+  avatarSource: '',
+  downloadURL: '',
   // instrumentArray: [],
   // genreArray: [],
   bio: ''
