@@ -14,7 +14,7 @@ class App extends Component {
     authDomain: "local-sound-28e64.firebaseapp.com",
     databaseURL: "https://local-sound-28e64.firebaseio.com",
     projectId: "local-sound-28e64",
-    storageBucket: "",
+    storageBucket: "gs://local-sound-28e64.appspot.com",
     messagingSenderId: "763062690386"
   };
   firebase.initializeApp(config);
