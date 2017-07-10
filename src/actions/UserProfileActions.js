@@ -13,12 +13,12 @@ export const userProfileUpdate = ({ prop, value }) => {
   };
 };
 
-export const userProfileCreate = ({ name, phone, bio, uid }) => {
+export const userProfileCreate = ({ name, phone, bio, uploadURL, uid }) => {
   const { currentUser } = firebase.auth();
 
   return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/profileInfo`)
-      .set({ name, phone, bio })
+      .set({ name, phone, bio, uploadURL })
       .then(() => {
         dispatch({ type: PROFILE_CREATE });
         Actions.user_home({ type: 'reset' });

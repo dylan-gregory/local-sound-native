@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   name: '',
   phone: '',
   avatarSource: '',
-  downloadURL: '',
+  uploadURL: '',
   // instrumentArray: [],
   // genreArray: [],
   bio: ''

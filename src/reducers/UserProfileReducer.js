@@ -8,7 +8,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case PROFILE_FETCH_SUCCESS:
       console.log(action);
-      return action.payload;
+      return action.payload !== null ? action.payload : state;
     default:
       return state;
 

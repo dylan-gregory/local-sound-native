@@ -18,7 +18,7 @@ class UserInfoForm extends Component {
       phone: this.props.phone,
       bio: this.props.bio,
       avatarSource: this.props.avatarSource,
-      uploadURL: this.props.downloadURL || null
+      uploadURL: this.props.uploadURL
     };
 
     console.log('state', this.state);
@@ -66,7 +66,7 @@ class UserInfoForm extends Component {
           avatarSource: source
         });
 
-        console.log('uri thing', this.state.avatarSource.uri);
+
       }
     });
   }
@@ -116,49 +116,14 @@ class UserInfoForm extends Component {
       })
     };
 
-    uploadImage(this.state.avatarSource.uri)
-        .then(url => this.setState({ uploadURL: url }))
-        .then(() => this.props.userProfileCreate(this.state))
-        .catch(error => console.log(error));
-
-        console.log('upload', this.state.uploadURL);
-    //
-    //     var bucket = firebase.storage().ref().bucket;
-    //     var firebaseUrl = "https://firebasestorage.googleapis.com/v0/b/" + bucket + "/o/";
-    //     var finalUrl = firebaseUrl + 'path%2Fto%2Fresource';
-    //     firebase.auth().currentUser.getToken()
-    //     .then((token) => {
-    //       fetch(finalUrl, {headers: {'Authorization' : 'Firebase ' + token}})
-    //       .then((response) => response.json())
-    //       .then((responseJson) => {
-    //         var downloadURL = finalUrl + "?alt=media&token=" + responseJson.downloadTokens})
-    //         console.log('download', downloadURL);
-    //       })
-
-
-    //   const newPostKey = firebase.database().ref('posts').push().key
-    //   const imageName = `${newPostKey}.jpg`
-    //   uploadImage(this.state.imagePath, imageName)
-
-    // // Create a root reference
-    // const storageRef = firebase.storage().ref();
-    //
-    // // Create a reference to 'mountains.jpg'
-    // const mountainsRef = storageRef.child('mountains.jpg');
-    //
-    // // Create a reference to 'images/mountains.jpg'
-    // const mountainImagesRef = storageRef.child('images/mountains.jpg');
-    //
-    // // While the file names are the same, the references point to different files
-    // mountainsRef.name === mountainImagesRef.name            // true
-    // mountainsRef.fullPath === mountainImagesRef.fullPath    // false
-    //
-    // const Blob = RNFetchBlob.polyfill.Blob;
-    //
-    // var file = ... // use the Blob or File API
-    // ref.put(file).then(function(snapshot) {
-    //   console.log('Uploaded a blob or file!');
-    // });
+    if (this.state.avatarSource) {
+      uploadImage(this.state.avatarSource.uri)
+          .then(url => this.setState({ uploadURL: url }))
+          .then(() => this.props.userProfileCreate(this.state))
+          .catch(error => console.log(error));
+    }else {
+      this.props.userProfileCreate(this.state);
+    }
 
     // this.props.userProfileCreate(this.state);
   }
@@ -260,9 +225,9 @@ class UserInfoForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, bio } = state.profileInfo;
+  const { name, phone, bio, uploadURL } = state.profileInfo;
 
-  return { name, phone, bio };
+  return { name, phone, bio, uploadURL };
 };
 
 export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate, userProfileFetch })(UserInfoForm);

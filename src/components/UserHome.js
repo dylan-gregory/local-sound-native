@@ -54,19 +54,36 @@ class UserHome extends Component {
               <Image source={require('../images/waves.jpeg')} style={{ height: 220, width: null, flex: 1 }} />
             </CardItem>
             <CardItem>
-              <Text>
-                Name: {this.props.name}
-              </Text>
+
+              { this.props.name !== null ?
+                <Text>
+                  Name:{this.props.name}
+                </Text> : null }
+
             </CardItem>
             <CardItem>
-              <Text>
-                Phone: {this.props.phone}
-              </Text>
+
+              { this.props.phone !== null ?
+                <Text>
+                  Phone:{this.props.phone}
+                </Text> : null }
+
             </CardItem>
             <CardItem>
-              <Text>
-                Bio:{this.props.bio}
-              </Text>
+
+              { this.props.bio !== null ?
+                <Text>
+                  Bio:{this.props.bio}
+                </Text> : null }
+
+            </CardItem>
+            <CardItem>
+
+              { this.props.uploadURL !== null ?
+
+                  <Image style={{ height: 50, width: 100 }} source={{ uri: this.props.uploadURL}} />
+
+                 : null }
             </CardItem>
           </Card>
 
@@ -94,9 +111,9 @@ class UserHome extends Component {
 }
 
 const mapStateToProps = state => {
-  const { name, phone, bio } = state.profileInfo;
+  const { name, phone, bio, uploadURL } = state.profileInfo;
 
-  return { name, phone, bio };
+  return { name, phone, bio, uploadURL };
 
 };
 
