@@ -38,7 +38,7 @@ class UserHome extends Component {
           <Card>
             <CardItem>
               <Left>
-                <Thumbnail square size={50} source={require( '../images/horseshoe.png')} />
+                <Thumbnail round size={50} source={{ uri: this.props.uploadURL}} />
                 <Body>
                   <Text>My stuff</Text>
                   <Text note>For real, it's mine</Text>
@@ -77,14 +77,7 @@ class UserHome extends Component {
                 </Text> : null }
 
             </CardItem>
-            <CardItem>
 
-              { this.props.uploadURL !== null ?
-
-                  <Image style={{ height: 50, width: 100 }} source={{ uri: this.props.uploadURL}} />
-
-                 : null }
-            </CardItem>
           </Card>
 
         </Content>
@@ -111,9 +104,9 @@ class UserHome extends Component {
 }
 
 const mapStateToProps = state => {
-  const { name, phone, bio, uploadURL } = state.profileInfo;
+  const { name, phone, bio, uploadURL, location, genreArray, instrumentArray } = state.profileInfo;
 
-  return { name, phone, bio, uploadURL };
+  return { name, phone, bio, uploadURL, location, genreArray, instrumentArray };
 
 };
 

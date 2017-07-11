@@ -17,8 +17,11 @@ class UserInfoForm extends Component {
       name: this.props.name,
       phone: this.props.phone,
       bio: this.props.bio,
+      location: this.props.location,
       avatarSource: this.props.avatarSource,
-      uploadURL: this.props.uploadURL
+      uploadURL: this.props.uploadURL,
+      genreArray: this.props.genreArray,
+      instrumentArray: this.props.instrumentArray
     };
 
     console.log('state', this.state);
@@ -69,6 +72,9 @@ class UserInfoForm extends Component {
 
       }
     });
+  }
+  addGenre(){
+    console.log('hey');
   }
   onButtonPress() {
     // const { name, phone, bio } = this.props;
@@ -125,7 +131,6 @@ class UserInfoForm extends Component {
       this.props.userProfileCreate(this.state);
     }
 
-    // this.props.userProfileCreate(this.state);
   }
   render() {
 
@@ -154,6 +159,13 @@ class UserInfoForm extends Component {
                     onChangeText={(text) => this.setState({ phone: text })}
                   />
                 </Item>
+                <Item floatingLabel>
+                  <Label>Zip Code</Label>
+                  <Input
+                    value={this.state.location}
+                    onChangeText={(text) => this.setState({ location: text })}
+                  />
+                </Item>
                 <Item floatingLabel last>
                   <Label>Tell us about yourself...</Label>
                   <Input
@@ -162,14 +174,23 @@ class UserInfoForm extends Component {
                   />
                 </Item>
 
+                <Item>
+                  <Text>Avatar:</Text>
+                </Item>
+                <Item>
+
+                { this.state.uploadURL !== '' ?
+                  <Image source={{ uri: this.state.uploadURL}} style={{ height: 40, width: 60 }} /> :
+                  <Image source={this.state.avatarSource} style={{ height: 40, width: 60 }} />}
+
+                </Item>
+
                 <Button onPress={this.uploadPic.bind(this)}>
-                  <Text>Upload photo?</Text>
+                  <Text>Upload new photo?</Text>
                 </Button>
 
-                <Image source={this.state.avatarSource} style={{ height: 40, width: 60 }} />
-
                 <Button onPress={this.onButtonPress.bind(this)} >
-                  <Text>Update</Text>
+                  <Text>Save</Text>
                 </Button>
               </Form>
             </Card>
@@ -182,37 +203,38 @@ class UserInfoForm extends Component {
 
             <Grid>
               <Col>
-                <Button>
+                <Button onPress={() => this.setState({ genreArray: [...this.state.genreArray, 'rock']})}>
                   <Text>Rock</Text>
                 </Button>
-                <Button>
+
+                <Button value="pop" onPress={this.addGenre.bind(this)}>
                   <Text>Pop</Text>
                 </Button>
-                <Button>
+                <Button value="country" onPress={this.addGenre.bind(this)}>
                   <Text>Country</Text>
                 </Button>
-                <Button>
+                <Button value="ambient" onPress={this.addGenre.bind(this)}>
                   <Text>Ambient</Text>
                 </Button>
-                <Button>
+                <Button value="bluegrass" onPress={this.addGenre.bind(this)}>
                   <Text>Bluegrass</Text>
                 </Button>
               </Col>
 
               <Col>
-                <Button>
+                <Button value="rb" onPress={this.addGenre.bind(this)}>
                   <Text>R&B</Text>
                 </Button>
-                <Button>
+                <Button value="motown" onPress={this.addGenre.bind(this)}>
                   <Text>Motown</Text>
                 </Button>
-                <Button>
+                <Button value="jazz" onPress={this.addGenre.bind(this)}>
                   <Text>Jazz</Text>
                 </Button>
-                <Button>
+                <Button value="dance" onPress={this.addGenre.bind(this)}>
                   <Text>Dance</Text>
                 </Button>
-                <Button>
+                <Button value="hiphop" onPress={this.addGenre.bind(this)}>
                   <Text>Hip-Hop</Text>
                 </Button>
               </Col>
@@ -225,9 +247,9 @@ class UserInfoForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, bio, uploadURL } = state.profileInfo;
+  const { name, phone, bio, uploadURL, location, genreArray, instrumentArray } = state.profileInfo;
 
-  return { name, phone, bio, uploadURL };
+  return { name, phone, bio, uploadURL, location, genreArray, instrumentArray };
 };
 
 export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate, userProfileFetch })(UserInfoForm);

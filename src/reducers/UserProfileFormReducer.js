@@ -8,8 +8,9 @@ const INITIAL_STATE = {
   phone: '',
   avatarSource: '',
   uploadURL: '',
-  // instrumentArray: [],
-  // genreArray: [],
+  instrumentArray: ['music'],
+  genreArray: ['music'],
+  location: '',
   bio: ''
 };
 

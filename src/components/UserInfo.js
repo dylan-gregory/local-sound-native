@@ -32,9 +32,9 @@ class UserInfo extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, bio, uploadURL } = state.profileInfo;
+  const { name, phone, bio, uploadURL, location, genreArray, instrumentArray } = state.profileInfo;
 
-  return { name, phone, bio, uploadURL };
+  return { name, phone, bio, uploadURL, location, genreArray, instrumentArray };
 };
 
 export default connect(mapStateToProps, { userProfileUpdate, userProfileCreate })(UserInfo);
