@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { Container, Content, Header, Footer, FooterTab, Button, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right } from 'native-base';
-import { userProfileFetch } from '../actions';
+import { userProfileFetch, logoutUser } from '../actions';
 // import { Card, CardSection, Input, Spinner } from './common';
 
 class UserHome extends Component {
@@ -79,6 +79,12 @@ class UserHome extends Component {
 
             </CardItem>
 
+            <CardItem>
+              <Button onPress={this.props.logoutUser}>
+                <Text>Log Out</Text>
+              </Button>
+            </CardItem>
+
           </Card>
 
         </Content>
@@ -111,4 +117,4 @@ const mapStateToProps = state => {
 
 };
 
-export default connect(mapStateToProps, { userProfileFetch })(UserHome);
+export default connect(mapStateToProps, { userProfileFetch, logoutUser })(UserHome);
