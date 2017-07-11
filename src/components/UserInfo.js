@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { userProfileCreate, userProfileUpdate } from '../actions';
+import { userProfileCreate, userProfileUpdate, addGenre } from '../actions';
 import { Container, Content, Header, Footer, FooterTab, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right, Form, Item, Input, Label } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button } from './common';
@@ -37,4 +37,4 @@ const mapStateToProps = (state) => {
   return { name, phone, bio, uploadURL, location, genreArray, instrumentArray };
 };
 
-export default connect(mapStateToProps, { userProfileUpdate, userProfileCreate })(UserInfo);
+export default connect(mapStateToProps, { userProfileUpdate, userProfileCreate, addGenre })(UserInfo);

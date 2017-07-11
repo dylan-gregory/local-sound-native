@@ -15,10 +15,11 @@ class UserHome extends Component {
     //
     // this.createDataSource(this.props);
   }
-  componentWillReceiveProps(nextProps) {
-  console.log('here', nextProps);
-
-  }
+  // componentWillReceiveProps(nextProps) {
+  //
+  //   console.log('nextProps', nextProps);
+  //
+  // }
   // createDataSource({ stuff }) {
   //   console.log('stuff', stuff);
   //

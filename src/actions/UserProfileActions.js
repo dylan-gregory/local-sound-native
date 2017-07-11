@@ -3,6 +3,7 @@ import { Actions } from 'react-native-router-flux';
 import {
   PROFILE_CREATE,
   PROFILE_UPDATE,
+  ADD_GENRE,
   PROFILE_FETCH_SUCCESS
 } from './types';
 
@@ -26,7 +27,13 @@ export const userProfileCreate = ({ name, phone, bio, uploadURL, location, genre
   };
 };
 
-// imgUrl, instrumentArray, genreArray, bio
+export const addGenre = ({ prop, value }) => {
+  console.log('works');
+  return {
+    type: ADD_GENRE,
+    payload: { prop, value }
+  };
+};
 
 export const userProfileFetch = () => {
   const { currentUser } = firebase.auth();

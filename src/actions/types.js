@@ -9,3 +9,4 @@ export const LOGIN_USER = 'login_user';
 export const PROFILE_CREATE = 'profile_create';
 export const PROFILE_UPDATE = 'profile_update';
 export const PROFILE_FETCH_SUCCESS = 'profile_fetch_success';
+export const ADD_GENRE = 'add_genre';

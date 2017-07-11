@@ -4,7 +4,7 @@ import RNFetchBlob from 'react-native-fetch-blob';
 import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-picker';
-import { userProfileCreate, userProfileUpdate, userProfileFetch } from '../actions';
+import { userProfileCreate, userProfileUpdate, userProfileFetch, addGenre } from '../actions';
 import { Container, Content, Header, Footer, FooterTab, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right, Form, Item, Input, Label } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button } from './common';
@@ -20,8 +20,8 @@ class UserInfoForm extends Component {
       location: this.props.location,
       avatarSource: this.props.avatarSource,
       uploadURL: this.props.uploadURL,
-      genreArray: this.props.genreArray,
-      instrumentArray: this.props.instrumentArray
+      genreArray: this.props.genreArray || [],
+      instrumentArray: this.props.instrumentArray || []
     };
 
     console.log('state', this.state);
@@ -31,10 +31,10 @@ class UserInfoForm extends Component {
   // componentWillMount() {
   //   this.props.userProfileFetch();
   // }
-  // componentWillReceiveProps(nextProps) {
-  //   console.log('NextProps', nextProps);
-  //
-  // }
+  componentWillReceiveProps(nextProps) {
+    console.log('NextProps', nextProps);
+
+  }
   uploadPic(){
 
     const options = {
@@ -73,12 +73,17 @@ class UserInfoForm extends Component {
       }
     });
   }
-  addGenre(){
-    console.log('hey');
+  addGenre(genre){
+    console.log('clicked', genre);
+    this.state.genreArray.push(genre);
+    this.props.addGenre({ prop: 'genreArray', value: genre});
+    console.log('i hope this works', this.state.genreArray);
+
   }
   onButtonPress() {
     // const { name, phone, bio } = this.props;
     // this.props.userProfileUpdate({ prop: 'name', value: this.state.name });
+    console.log('state here', this.state);
 
     const Blob = RNFetchBlob.polyfill.Blob;
     const fs = RNFetchBlob.fs;
@@ -203,38 +208,38 @@ class UserInfoForm extends Component {
 
             <Grid>
               <Col>
-                <Button onPress={() => this.setState({ genreArray: [...this.state.genreArray, 'rock']})}>
+                <Button onPress={() => this.addGenre('rock')}>
                   <Text>Rock</Text>
                 </Button>
 
-                <Button value="pop" onPress={this.addGenre.bind(this)}>
+                <Button value="pop" onPress={() => this.addGenre('pop')}>
                   <Text>Pop</Text>
                 </Button>
-                <Button value="country" onPress={this.addGenre.bind(this)}>
+                <Button value="country" onPress={() => this.addGenre('country')}>
                   <Text>Country</Text>
                 </Button>
-                <Button value="ambient" onPress={this.addGenre.bind(this)}>
+                <Button value="ambient" onPress={() => this.addGenre('ambient')}>
                   <Text>Ambient</Text>
                 </Button>
-                <Button value="bluegrass" onPress={this.addGenre.bind(this)}>
+                <Button value="bluegrass" onPress={() => this.addGenre('bluegrass')}>
                   <Text>Bluegrass</Text>
                 </Button>
               </Col>
 
               <Col>
-                <Button value="rb" onPress={this.addGenre.bind(this)}>
+                <Button value="rb" onPress={() => this.addGenre('rb')}>
                   <Text>R&B</Text>
                 </Button>
-                <Button value="motown" onPress={this.addGenre.bind(this)}>
+                <Button value="motown" onPress={() => this.addGenre('motown')}>
                   <Text>Motown</Text>
                 </Button>
-                <Button value="jazz" onPress={this.addGenre.bind(this)}>
+                <Button value="jazz" onPress={() => this.addGenre('jazz')}>
                   <Text>Jazz</Text>
                 </Button>
-                <Button value="dance" onPress={this.addGenre.bind(this)}>
+                <Button value="dance" onPress={() => this.addGenre('dance')}>
                   <Text>Dance</Text>
                 </Button>
-                <Button value="hiphop" onPress={this.addGenre.bind(this)}>
+                <Button value="hiphop" onPress={() => this.addGenre('hip-hop')}>
                   <Text>Hip-Hop</Text>
                 </Button>
               </Col>
@@ -252,4 +257,4 @@ const mapStateToProps = (state) => {
   return { name, phone, bio, uploadURL, location, genreArray, instrumentArray };
 };
 
-export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate, userProfileFetch })(UserInfoForm);
+export default connect(mapStateToProps, { userProfileCreate, userProfileUpdate, userProfileFetch, addGenre })(UserInfoForm);
