@@ -9,16 +9,21 @@ const RouterComponent = () => {
   return(
     <Router
       sceneStyle={{ paddingTop: 65, backgroundColor: '#333'}}
-      navigationBarStyle={{ backgroundColor: '#FAEFCC' }}
+      navigationBarStyle={{ backgroundColor: '#576AAC' }}
       barButtonIconStyle={{ tintColor: '#333' }}
       rightButtonTextStyle={{ color: '#333' }}
+      titleStyle={{ color: 'white' }}
     >
+
+            {/* add this prop to the scene to change the header font
+            titleStyle={{ fontFamily: 'Baskerville' }}
+            */}
       <Scene key="main">
         <Scene
           key="splash"
           component={SplashPage}
           title="Local Sound"
-          titleStyle={{ fontFamily: 'Baskerville' }}
+
           initial
         />
         <Scene
@@ -62,4 +67,10 @@ const RouterComponent = () => {
 // magenta-y: #AF506C
 // navy: #354370
 // maroon: #590925
+
+// purpley: #576AAC
+// different purple #5D5D81
+// darker purple #3B3355
+// light blue #BFCDE0
+// white-ish mint #F4F9E9
 export default RouterComponent;

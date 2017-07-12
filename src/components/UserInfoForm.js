@@ -19,7 +19,7 @@ class UserInfoForm extends Component {
       bio: this.props.bio,
       location: this.props.location,
       avatarSource: this.props.avatarSource,
-      uploadURL: this.props.uploadURL,
+      uploadURL: this.props.uploadURL || null,
       genreArray: this.props.genreArray || [],
       instrumentArray: this.props.instrumentArray || []
     };

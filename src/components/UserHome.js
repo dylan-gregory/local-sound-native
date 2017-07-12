@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { Container, Content, Header, Footer, FooterTab, Button, Text, Card, CardItem, Left, Body, Icon, Thumbnail, Right } from 'native-base';
+import { Container, Content, Header, Footer, FooterTab, Text, CardItem, Left, Body, Icon, Thumbnail, Right } from 'native-base';
 import { userProfileFetch, logoutUser } from '../actions';
-// import { Card, CardSection, Input, Spinner } from './common';
+import { Card, CardSection, Button, Spinner } from './common';
 
 class UserHome extends Component {
   componentWillMount() {

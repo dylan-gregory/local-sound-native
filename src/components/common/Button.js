@@ -32,7 +32,7 @@ const styles = {
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FAEFCC',
+    backgroundColor: '#BFCDE0',
     borderRadius: 2,
     margin: 6,
     paddingHorizontal: 16,
