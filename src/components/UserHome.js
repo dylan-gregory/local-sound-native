@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { Container, Content, Header, Footer, FooterTab, Text, CardItem, Left, Body, Icon, Thumbnail, Right } from 'native-base';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Container, Content, Header, Footer, FooterTab, Text, CardItem, Left, Body, Thumbnail, Right } from 'native-base';
 import { userProfileFetch, logoutUser } from '../actions';
 import { Card, CardSection, Button, Spinner } from './common';
 
@@ -46,8 +47,10 @@ class UserHome extends Component {
                 </Body>
               </Left>
               <Right>
-                <Button onPress={this.onButtonPress.bind(this)}>
-                  <Text>Edit</Text>
+                <Button style={styles.roundButton} onPress={this.onButtonPress.bind(this)}>
+
+                    <Icon name="edit" size={25} color="#333" />
+
                 </Button>
               </Right>
             </CardItem>
@@ -109,6 +112,31 @@ class UserHome extends Component {
     );
   }
 }
+
+const styles = {
+  roundButton: {
+    flex: 1,
+    // flexDirection: 'column',
+    // alignSelf: 'stretch',
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#AF506C',
+    borderRadius: 30,
+    margin: 6,
+    paddingHorizontal: 10,
+    paddingTop: 5,
+    overflow: 'hidden',
+    // paddingVertical: 5,
+    shadowColor: "black",
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 2,
+      width: 0
+    }
+  }
+};
 
 const mapStateToProps = state => {
   const { name, phone, bio, uploadURL, location, genreArray, instrumentArray } = state.profileInfo;

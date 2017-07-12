@@ -8,7 +8,7 @@ const Button = (props) => {
   return (
       <TouchableOpacity
         onPress={props.onPress}
-        style={buttonStyle} >
+        style={props.style || buttonStyle} >
           <Text style={ textStyle }>
             {props.children}
           </Text>
@@ -37,6 +37,7 @@ const styles = {
     margin: 6,
     paddingHorizontal: 16,
     paddingVertical: 8,
+    overflow: 'hidden',
     shadowColor: "black",
     shadowOpacity: 0.3,
     shadowRadius: 2,

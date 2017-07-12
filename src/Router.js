@@ -73,4 +73,7 @@ const RouterComponent = () => {
 // darker purple #3B3355
 // light blue #BFCDE0
 // white-ish mint #F4F9E9
+// dark grey #B4B8AB
+// dark mint #71B48D
+// gold #FFC857
 export default RouterComponent;
