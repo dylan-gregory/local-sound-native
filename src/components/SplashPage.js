@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 // import { Card, Button } from 'react-native-material-design';
-import { Card, Button, CardSection, Input, Spinner } from './common';
+import { Container, Content, Card, CardItem } from 'native-base';
+import { Button, CardSection, Input, Spinner } from './common';
 
 class SplashPage extends Component {
   onButtonPress() {
@@ -10,21 +11,26 @@ class SplashPage extends Component {
   }
   render() {
     return (
-      <Card>
-        <CardSection>
-          <Text>
-            Hello!
-          </Text>
-        </CardSection>
+      <Container>
+        <Content>
+          <Card>
+            <CardItem>
+              <Text>
+                Hello!
+              </Text>
+            </CardItem>
 
-        <CardSection>
-          <Button
-            onPress={this.onButtonPress.bind(this)}>
-              Sign In
-          </Button>
-        </CardSection>
+            <CardItem>
+              <Button
+                onPress={this.onButtonPress.bind(this)}>
+                  Sign In
+              </Button>
+            </CardItem>
 
-      </Card>
+          </Card>
+        </Content>
+      </Container>
+
     );
   }
 }
