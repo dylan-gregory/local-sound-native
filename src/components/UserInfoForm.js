@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase, { firebaseApp} from 'firebase';
 import RNFetchBlob from 'react-native-fetch-blob';
-import { Image, Platform } from 'react-native';
+import { Image, Platform, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-picker';
 import { userProfileCreate, userProfileUpdate, userProfileFetch, addGenre } from '../actions';
@@ -72,6 +72,9 @@ class UserInfoForm extends Component {
 
       }
     });
+  }
+  addInstrument(instrument){
+    console.log('inst', instrument);
   }
   addGenre(genre){
     console.log('clicked', genre);
@@ -146,10 +149,22 @@ class UserInfoForm extends Component {
           <Card>
 
             <CardItem header>
-              <Text>Personal Info:</Text>
+              <Text>Profile Info:</Text>
             </CardItem>
 
               <Form>
+                <CardItem style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                  { this.state.uploadURL !== '' ?
+                    <Image style={{ height: 150, width: 150, borderRadius: 75}} source={{ uri: this.props.uploadURL}} /> :
+                    <Thumbnail round large size={200} source={{ uri: this.state.avatarSource}} />
+                  }
+                </CardItem>
+
+
+                <Button onPress={this.uploadPic.bind(this)}>
+                  <Text>Upload new photo?</Text>
+                </Button>
+
                 <Item floatingLabel>
                   <Label>Name</Label>
                   <Input
@@ -171,7 +186,7 @@ class UserInfoForm extends Component {
                     onChangeText={(text) => this.setState({ location: text })}
                   />
                 </Item>
-                <Item floatingLabel last>
+                <Item floatingLabel>
                   <Label>Tell us about yourself...</Label>
                   <Input
                     value={this.state.bio}
@@ -179,20 +194,6 @@ class UserInfoForm extends Component {
                   />
                 </Item>
 
-                <Item>
-                  <Text>Avatar:</Text>
-                </Item>
-                <Item>
-
-                { this.state.uploadURL !== '' ?
-                  <Image source={{ uri: this.state.uploadURL}} style={{ height: 40, width: 60 }} /> :
-                  <Image source={this.state.avatarSource} style={{ height: 40, width: 60 }} />}
-
-                </Item>
-
-                <Button onPress={this.uploadPic.bind(this)}>
-                  <Text>Upload new photo?</Text>
-                </Button>
 
                 <Button onPress={this.onButtonPress.bind(this)} >
                   <Text>Save</Text>
@@ -205,6 +206,40 @@ class UserInfoForm extends Component {
                 <Text>{"What kind of music are you trying to play?"}</Text>
               </CardItem>
             </Card>
+
+            <ScrollView horizontal>
+              <Button onPress={() => this.addInstrument('guitar')}>
+                <Text>Guitar</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('bass')}>
+                <Text>Bass</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('drums')}>
+                <Text>Drums</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('vox')}>
+                <Text>Vocals</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('keys')}>
+                <Text>Keys</Text>
+              </Button>
+
+              <Button onPress={() => this.addInstrument('violin')}>
+                <Text>Violin</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('cello')}>
+                <Text>Cello</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('sax')}>
+                <Text>Saxohpone</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('trumpet')}>
+                <Text>Trumpet</Text>
+              </Button>
+              <Button onPress={() => this.addInstrument('else')}>
+                <Text>Something else?</Text>
+              </Button>
+            </ScrollView>
 
             <Grid>
               <Col>

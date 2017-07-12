@@ -37,7 +37,7 @@ const styles = {
     margin: 6,
     paddingHorizontal: 16,
     paddingVertical: 8,
-    overflow: 'hidden',
+    // overflow: 'hidden',
     shadowColor: "black",
     shadowOpacity: 0.3,
     shadowRadius: 2,

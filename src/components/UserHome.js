@@ -42,8 +42,8 @@ class UserHome extends Component {
               <Left>
                 <Thumbnail round size={50} source={{ uri: this.props.uploadURL}} />
                 <Body>
-                  <Text>My stuff</Text>
-                  <Text note>For real, it's mine</Text>
+                  <Text>{this.props.name}</Text>
+                  <Text note>Home</Text>
                 </Body>
               </Left>
               <Right>
