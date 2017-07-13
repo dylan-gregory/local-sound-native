@@ -91,22 +91,7 @@ class UserHome extends Component {
           </Card>
 
         </Content>
-        <Footer>
-          <FooterTab>
-            <Button>
-              <Text>App</Text>
-            </Button>
-            <Button>
-              <Text>Social</Text>
-            </Button>
-            <Button>
-              <Text>People</Text>
-            </Button>
-            <Button active>
-              <Text>Music</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
+
       </Container>
 
     );
