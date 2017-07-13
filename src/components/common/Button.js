@@ -33,7 +33,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#BFCDE0',
-    borderRadius: 2,
+    borderRadius: 5,
     margin: 6,
     paddingHorizontal: 16,
     paddingVertical: 8,
