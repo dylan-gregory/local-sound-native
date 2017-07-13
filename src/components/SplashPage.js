@@ -79,7 +79,7 @@ class SplashPage extends Component {
             </CardSection>
 
           </Card>
-          
+
         </Content>
       </Container>
 

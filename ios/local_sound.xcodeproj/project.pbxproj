@@ -62,6 +62,12 @@
 		4A09EBEF2878478B8C5E66CB /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188FC245A19946B2AE9D4DBE /* Zocial.ttf */; };
 		9509F9AA849B4DA58F0CAA98 /* Baksoda.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90F4CB6A19B14A28980B22C6 /* Baksoda.otf */; };
 		8C2A2C4B72A94F13B5EAE23D /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5422F9DC6C8F4968B9526574 /* Raleway-Regular.ttf */; };
+		F3FE93604BCC46AEB7FF5474 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D07E69F56FB446091564C4D /* Oswald-Medium.ttf */; };
+		18E23CA88F694D5CB9CB219A /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2AA248A8D845958B91F976 /* Oswald-Regular.ttf */; };
+		377E5B9991664B538A7BB607 /* Raleway Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6334DEEBFA412AAD84A9B0 /* Raleway Medium.ttf */; };
+		CA9A4EBF505D465CA49A8295 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E40FCCDE58849098683DF43 /* Raleway-Bold.ttf */; };
+		39C859CBF47947898D0EFF0D /* Raleway_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7025454CDC4334A3321259 /* Raleway_bold.ttf */; };
+		E0012A0BD23844BDBEC77209 /* Raleway_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71EA9809ECC34141A6B36A51 /* Raleway_italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +317,12 @@
 		188FC245A19946B2AE9D4DBE /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		90F4CB6A19B14A28980B22C6 /* Baksoda.otf */ = {isa = PBXFileReference; name = "Baksoda.otf"; path = "../src/fonts/Baksoda.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5422F9DC6C8F4968B9526574 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; name = "Raleway-Regular.ttf"; path = "../src/fonts/Raleway-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2D07E69F56FB446091564C4D /* Oswald-Medium.ttf */ = {isa = PBXFileReference; name = "Oswald-Medium.ttf"; path = "../src/fonts/Oswald-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D2AA248A8D845958B91F976 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; name = "Oswald-Regular.ttf"; path = "../src/fonts/Oswald-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C6334DEEBFA412AAD84A9B0 /* Raleway Medium.ttf */ = {isa = PBXFileReference; name = "Raleway Medium.ttf"; path = "../src/fonts/Raleway Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E40FCCDE58849098683DF43 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; name = "Raleway-Bold.ttf"; path = "../src/fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA7025454CDC4334A3321259 /* Raleway_bold.ttf */ = {isa = PBXFileReference; name = "Raleway_bold.ttf"; path = "../src/fonts/Raleway_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71EA9809ECC34141A6B36A51 /* Raleway_italic.ttf */ = {isa = PBXFileReference; name = "Raleway_italic.ttf"; path = "../src/fonts/Raleway_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,6 +585,12 @@
 				188FC245A19946B2AE9D4DBE /* Zocial.ttf */,
 				90F4CB6A19B14A28980B22C6 /* Baksoda.otf */,
 				5422F9DC6C8F4968B9526574 /* Raleway-Regular.ttf */,
+				2D07E69F56FB446091564C4D /* Oswald-Medium.ttf */,
+				4D2AA248A8D845958B91F976 /* Oswald-Regular.ttf */,
+				4C6334DEEBFA412AAD84A9B0 /* Raleway Medium.ttf */,
+				8E40FCCDE58849098683DF43 /* Raleway-Bold.ttf */,
+				AA7025454CDC4334A3321259 /* Raleway_bold.ttf */,
+				71EA9809ECC34141A6B36A51 /* Raleway_italic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -960,6 +978,12 @@
 				4A09EBEF2878478B8C5E66CB /* Zocial.ttf in Resources */,
 				9509F9AA849B4DA58F0CAA98 /* Baksoda.otf in Resources */,
 				8C2A2C4B72A94F13B5EAE23D /* Raleway-Regular.ttf in Resources */,
+				F3FE93604BCC46AEB7FF5474 /* Oswald-Medium.ttf in Resources */,
+				18E23CA88F694D5CB9CB219A /* Oswald-Regular.ttf in Resources */,
+				377E5B9991664B538A7BB607 /* Raleway Medium.ttf in Resources */,
+				CA9A4EBF505D465CA49A8295 /* Raleway-Bold.ttf in Resources */,
+				39C859CBF47947898D0EFF0D /* Raleway_bold.ttf in Resources */,
+				E0012A0BD23844BDBEC77209 /* Raleway_italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

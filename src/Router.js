@@ -9,10 +9,10 @@ const RouterComponent = () => {
   return(
     <Router
       sceneStyle={{ paddingTop: 65, backgroundColor: '#333'}}
-      navigationBarStyle={{ backgroundColor: '#576AAC', height: 70 }}
+      navigationBarStyle={{ backgroundColor: '#576AAC' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ fontFamily: 'Baksoda', fontSize: 33, color: '#fff' }}
+      titleStyle={{ fontFamily: 'Raleway', fontSize: 20, color: '#fff' }}
     >
 
             {/* add this prop to the scene to change the header font
@@ -23,7 +23,7 @@ const RouterComponent = () => {
           key="splash"
           component={SplashPage}
           title="Local Sound"
-
+          titleStyle={{ fontFamily: 'Baksoda', fontSize: 30 }}
           initial
         />
         <Scene

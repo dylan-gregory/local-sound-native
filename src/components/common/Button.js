@@ -19,9 +19,10 @@ const Button = (props) => {
 const styles = {
   textStyle: {
     fontFamily: 'Raleway',
+    fontWeight: 'bold',
     alignSelf: 'center',
     color: '#333',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     paddingTop: 10,
     paddingBottom: 10,
@@ -34,7 +35,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#BFCDE0',
-    borderRadius: 5,
+    borderRadius: 2,
     margin: 6,
     paddingHorizontal: 16,
     paddingVertical: 8,
