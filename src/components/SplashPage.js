@@ -3,6 +3,7 @@ import { Text, Image, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 // import { Card, Button } from 'react-native-material-design';
 import { Container, Content, Card, CardItem, Left, Body, Thumbnail, Right } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Button, CardSection, Input, Spinner } from './common';
 
 class SplashPage extends Component {
@@ -21,6 +22,22 @@ class SplashPage extends Component {
                   <Text style={styles.headline}>
                     Let's make some noise
                   </Text>
+                  <Grid>
+                    <Col>
+                      <Button
+                        onPress={this.onButtonPress.bind(this)}>
+                          Log In
+                      </Button>
+                    </Col>
+                    <Col>
+                      <Button
+                        onPress={this.onButtonPress.bind(this)}>
+                          Sign Up
+                      </Button>
+                    </Col>
+                  </Grid>
+
+
                 </View>
               </Image>
 
@@ -61,16 +78,18 @@ class SplashPage extends Component {
 const styles = {
   backdrop: {
     flex: 1,
-    paddingTop: 420,
+    paddingTop: 450,
     width: null,
     height: 600,
     alignItems: 'center',
     marginTop: 5
   },
   backdropView: {
+    padding: 5,
     height: 120,
-    width: 320,
-    backgroundColor: 'rgba(0,0,0,0)',
+    width: 360,
+    backgroundColor: 'rgba(80,80,80,0.8)',
+    borderRadius: 5
   },
   headline: {
     flex: 1,
@@ -78,7 +97,7 @@ const styles = {
     fontSize: 50,
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
-    color: 'white'
+    color: '#F4F9E9'
   },
   noise: {
     flex: 1,
