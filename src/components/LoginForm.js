@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 import { Container, Content, Card, CardItem } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 import { CardSection, Input, Button, Spinner } from './common';
 
 class LoginForm extends Component {
@@ -33,6 +34,7 @@ class LoginForm extends Component {
       <Container>
         <Content>
           <Card>
+
             <CardItem>
               <Input
                 label="Email"
@@ -59,6 +61,34 @@ class LoginForm extends Component {
             <CardItem>
               {this.renderButton()}
             </CardItem>
+
+            <Grid>
+              <Row>
+                <Text style={styles.paragraphText}>
+                  Are you a musician?
+                </Text>
+              </Row>
+              <Row>
+                <Text style={styles.paragraphText}>
+                   Songwriter?
+                </Text>
+              </Row>
+              <Row>
+                <Text style={styles.paragraphText}>
+                   Producer?
+                </Text>
+              </Row>
+              <Row>
+                <Text style={styles.paragraphText}>
+                   Tour manager?
+                </Text>
+              </Row>
+            </Grid>
+
+              <Text style={styles.accentText}>
+                Local Sound is for YOU
+              </Text>
+
           </Card>
         </Content>
       </Container>
@@ -71,7 +101,29 @@ const styles = {
   errorTextStyle: {
     fontSize: 20,
     alignSelf: 'center',
-
+    color: 'red'
+  },
+  headerText: {
+    flex: 1,
+    fontFamily: 'Baksoda',
+    fontSize: 50,
+    textAlign: 'center',
+    marginTop: 15,
+    marginBottom: 15
+  },
+  paragraphText: {
+    fontFamily: 'Raleway',
+    fontSize: 20,
+    marginLeft: 10
+  },
+  accentText: {
+    flex: 1,
+    fontFamily: 'Baksoda',
+    fontSize: 45,
+    textAlign: 'center',
+    marginTop: 15,
+    marginBottom: 15,
+    lineHeight: 50
   }
 };
 

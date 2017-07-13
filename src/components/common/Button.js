@@ -18,6 +18,7 @@ const Button = (props) => {
 
 const styles = {
   textStyle: {
+    fontFamily: 'Raleway',
     alignSelf: 'center',
     color: '#333',
     fontSize: 16,

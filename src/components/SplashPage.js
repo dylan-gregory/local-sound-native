@@ -41,33 +41,45 @@ class SplashPage extends Component {
                 </View>
               </Image>
 
-
-
           <Card>
-            <Text>
-              Are you a musician? A song writer? A producer? A tour manager?
-            </Text>
-            <Text>
-              Local Sound
-            </Text>
-            <Text>
-              is for YOU
+
+            <Text style={styles.headerText}>
+              What is Local Sound?
             </Text>
 
-            <CardItem>
-              <Text>
-                Hello!
+            <CardSection>
+              <Grid>
+                <Row>
+                  <Text style={styles.paragraphText}>
+                    Local sound is you.
+                  </Text>
+                </Row>
+                <Row>
+                  <Text style={styles.paragraphText}>
+                    Your band.
+                  </Text>
+                </Row>
+                <Row>
+                  <Text style={styles.paragraphText}>
+                    Your friends.
+                  </Text>
+                </Row>
+                <Row>
+                  <Text style={styles.paragraphText}>
+                    Your music.
+                  </Text>
+                </Row>
+              </Grid>
+
+            </CardSection>
+            <CardSection>
+              <Text style={styles.accentText}>
+                It's the sound of your city.
               </Text>
-            </CardItem>
-
-            <CardItem>
-              <Button
-                onPress={this.onButtonPress.bind(this)}>
-                  Sign In
-              </Button>
-            </CardItem>
+            </CardSection>
 
           </Card>
+          
         </Content>
       </Container>
 
@@ -99,12 +111,27 @@ const styles = {
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#F4F9E9'
   },
-  noise: {
+  headerText: {
     flex: 1,
     fontFamily: 'Baksoda',
     fontSize: 50,
     textAlign: 'center',
-    color: '#333',
+    marginTop: 15,
+    marginBottom: 15
+  },
+  paragraphText: {
+    fontFamily: 'Raleway',
+    fontSize: 20,
+    marginLeft: 10
+  },
+  accentText: {
+    flex: 1,
+    fontFamily: 'Baksoda',
+    fontSize: 45,
+    textAlign: 'center',
+    marginTop: 15,
+    marginBottom: 15,
+    lineHeight: 50
   }
 };
 

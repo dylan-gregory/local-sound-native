@@ -203,7 +203,7 @@ class UserInfoForm extends Component {
 
             <Card>
               <CardItem>
-                <Text>{"What kind of music are you trying to play?"}</Text>
+                <Text style={styles.paragraphText}>What instruments do you play?</Text>
               </CardItem>
             </Card>
 
@@ -240,6 +240,12 @@ class UserInfoForm extends Component {
                 <Text>Something else?</Text>
               </Button>
             </ScrollView>
+
+            <Card>
+              <CardItem>
+                <Text style={styles.paragraphText}>What types of music do you play?</Text>
+              </CardItem>
+            </Card>
 
             <Grid>
               <Col>
@@ -285,6 +291,17 @@ class UserInfoForm extends Component {
     );
   }
 }
+
+const styles = {
+  paragraphText: {
+    flex: 1,
+    textAlign: 'center',
+    alignSelf: 'center',
+    fontFamily: 'Raleway',
+    fontSize: 20,
+    marginLeft: 10
+  }
+};
 
 const mapStateToProps = (state) => {
   const { name, phone, bio, uploadURL, location, genreArray, instrumentArray } = state.profileInfo;
