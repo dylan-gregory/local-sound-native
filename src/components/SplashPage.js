@@ -90,7 +90,7 @@ class SplashPage extends Component {
 const styles = {
   backdrop: {
     flex: 1,
-    paddingTop: 450,
+    paddingTop: 435,
     width: null,
     height: 600,
     alignItems: 'center',
@@ -98,7 +98,8 @@ const styles = {
   },
   backdropView: {
     padding: 5,
-    height: 120,
+    paddingTop: 12,
+    height: 130,
     width: 360,
     backgroundColor: 'rgba(80,80,80,0.8)',
     borderRadius: 5
