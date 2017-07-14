@@ -94,7 +94,7 @@ class UserHome extends Component {
         <Footer>
           <FooterTab>
 
-            <Button style={styles.footerButton}>
+            <Button style={styles.footerButtonActive}>
               <Icon name="home" size={25} color="#fff" />
             </Button>
             <Button style={styles.footerButton}>
@@ -145,6 +145,14 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: '#333',
+      overflow: 'hidden',
+    },
+    footerButtonActive: {
+      flex: 1,
+      alignSelf: 'stretch',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#2AC278',
       overflow: 'hidden',
     }
 };
