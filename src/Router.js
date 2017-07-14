@@ -4,6 +4,7 @@ import SplashPage from './components/SplashPage';
 import LoginForm from './components/LoginForm';
 import UserHome from './components/UserHome';
 import UserInfo from './components/UserInfo';
+import Groups from './components/Groups';
 
 const RouterComponent = () => {
   return(
@@ -46,6 +47,12 @@ const RouterComponent = () => {
           title="Profile Info"
         />
       </Scene>
+
+      <Scene
+        key="groups"
+        component={Groups}
+        title="Groups"
+      />
 
 
 

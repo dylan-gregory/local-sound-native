@@ -139,11 +139,6 @@ const styles = {
 export default SplashPage;
 
 
-// Button props:
-// overrides={{ backgroundColor: 'paperIndigo', textColor: 'paperAmber' }}
-// raised={true}
-// text="Login"
-
 // The ONLY color names that can be passed into RNMUI overrides:
 
 // "googleBlue", "googleGreen", "googleGrey", "googleRed", "googleYellow", "paperAmber",

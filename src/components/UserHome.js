@@ -39,6 +39,21 @@ class UserHome extends Component {
       <Container>
         <Content>
           <Image source={require('../images/jesse-bass.jpg')} style={{ height: 300, width: null, flex: 1 }} />
+
+          <Card>
+            <Text>Upcoming Gigs/dates:</Text>
+            <CardItem>
+              <Text>This will have gig/practice details in a list form</Text>
+            </CardItem>
+          </Card>
+
+          <Card>
+            <Text>Gear Gallery</Text>
+            <CardItem>
+              <Text>This will either have photos of gear, or a placeholder box to click to upload some pics</Text>
+            </CardItem>
+          </Card>
+
           <Card>
             <CardItem>
               <Left>
@@ -97,10 +112,16 @@ class UserHome extends Component {
             <Button style={styles.footerButtonActive}>
               <Icon name="home" size={25} color="#fff" />
             </Button>
-            <Button style={styles.footerButton}>
+            <Button
+              style={styles.footerButton}
+
+            >
               <Icon name="search" size={25} color="#fff" />
             </Button>
-            <Button style={styles.footerButton}>
+            <Button
+              onPress={() => Actions.groups()}
+              style={styles.footerButton}
+            >
               <Icon name="group" size={25} color="#fff" />
             </Button>
             <Button style={styles.footerButton}>
