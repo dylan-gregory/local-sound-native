@@ -166,29 +166,33 @@ class UserInfoForm extends Component {
                 </Button>
 
                 <Item floatingLabel>
-                  <Label>Name</Label>
+                  <Label style={styles.inputStyle}>Name</Label>
                   <Input
+                    style={styles.inputStyle}
                     onChangeText={(text) => this.setState({ name: text })}
                     value={this.state.name}
                   />
                 </Item>
                 <Item floatingLabel>
-                  <Label>Number</Label>
+                  <Label style={styles.inputStyle}>Number</Label>
                   <Input
+                    style={styles.inputStyle}
                     value={this.state.phone}
                     onChangeText={(text) => this.setState({ phone: text })}
                   />
                 </Item>
                 <Item floatingLabel>
-                  <Label>Zip Code</Label>
+                  <Label style={styles.inputStyle}>Zip Code</Label>
                   <Input
+                    style={styles.inputStyle}
                     value={this.state.location}
                     onChangeText={(text) => this.setState({ location: text })}
                   />
                 </Item>
                 <Item floatingLabel>
-                  <Label>Tell us about yourself...</Label>
+                  <Label style={styles.inputStyle}>Tell us about yourself...</Label>
                   <Input
+                    style={styles.inputStyle}
                     value={this.state.bio}
                     onChangeText={(text) => this.setState({ bio: text })}
                   />
@@ -208,35 +212,60 @@ class UserInfoForm extends Component {
             </Card>
 
             <ScrollView horizontal>
-              <Button onPress={() => this.addInstrument('guitar')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('guitar')}>
                 <Text>Guitar</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('bass')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('bass')}>
                 <Text>Bass</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('drums')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('drums')}>
                 <Text>Drums</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('vox')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('vox')}>
                 <Text>Vocals</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('keys')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('keys')}>
                 <Text>Keys</Text>
               </Button>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('harmonica')}>
+                <Text>Harmonica</Text>
+              </Button>
 
-              <Button onPress={() => this.addInstrument('violin')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('violin')}>
                 <Text>Violin</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('cello')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('cello')}>
                 <Text>Cello</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('sax')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('sax')}>
                 <Text>Saxohpone</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('trumpet')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('trumpet')}>
                 <Text>Trumpet</Text>
               </Button>
-              <Button onPress={() => this.addInstrument('else')}>
+              <Button
+                style={styles.instrumentButtonStyle}
+                onPress={() => this.addInstrument('else')}>
                 <Text>Something else?</Text>
               </Button>
             </ScrollView>
@@ -297,9 +326,34 @@ const styles = {
     flex: 1,
     textAlign: 'center',
     alignSelf: 'center',
-    fontFamily: 'Raleway',
+    fontFamily: 'Ubuntu',
     fontSize: 20,
     marginLeft: 10
+  },
+  inputStyle: {
+    fontFamily: 'Ubuntu'
+  },
+  instrumentButtonStyle: {
+    flex: 1,
+    // flexDirection: 'column',
+    alignSelf: 'stretch',
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFC857',
+    borderRadius: 5,
+    margin: 6,
+    paddingHorizontal: 10,
+    paddingTop: 5,
+    overflow: 'hidden',
+    paddingVertical: 5,
+    shadowColor: "black",
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 2,
+      width: 0
+    }
   }
 };
 

@@ -12,7 +12,7 @@ const RouterComponent = () => {
       navigationBarStyle={{ backgroundColor: '#576AAC' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ fontFamily: 'Ubuntu-Medium', fontSize: 20, color: '#fff' }}
+      titleStyle={{ fontFamily: 'Ubuntu', fontSize: 20, color: '#fff' }}
     >
 
             {/* add this prop to the scene to change the header font
@@ -23,7 +23,7 @@ const RouterComponent = () => {
           key="splash"
           component={SplashPage}
           title="Local Sound"
-          titleStyle={{ fontFamily: 'Baksoda', fontSize: 30 }}
+          titleStyle={{ fontFamily: 'Baksoda', fontSize: 30, letterSpacing: 3 }}
           initial
         />
         <Scene

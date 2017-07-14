@@ -24,6 +24,7 @@ const Input = (props) => {
 const styles = {
   inputStyle: {
     color: '#333',
+    fontFamily: 'Ubuntu',
     borderBottomWidth: 2,
     borderColor: '#fff',
     paddingRight: 5,
@@ -34,6 +35,7 @@ const styles = {
   },
   labelStyle: {
     color: '#333',
+    fontFamily: 'Ubuntu',
     fontSize: 18,
     paddingLeft: 20,
     flex: 1

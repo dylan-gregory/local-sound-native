@@ -18,10 +18,10 @@ const Button = (props) => {
 
 const styles = {
   textStyle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Ubuntu',
     alignSelf: 'center',
     color: '#333',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '600',
     paddingTop: 10,
     paddingBottom: 10,

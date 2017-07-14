@@ -112,8 +112,8 @@ const styles = {
     marginBottom: 15
   },
   paragraphText: {
-    fontFamily: 'Raleway',
-    fontSize: 20,
+    fontFamily: 'Ubuntu',
+    fontSize: 16,
     marginLeft: 10
   },
   accentText: {

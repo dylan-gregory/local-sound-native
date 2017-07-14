@@ -44,8 +44,8 @@ class UserHome extends Component {
               <Left>
                 <Thumbnail round size={50} source={{ uri: this.props.uploadURL}} />
                 <Body>
-                  <Text>{this.props.name}</Text>
-                  <Text note>Home</Text>
+                  <Text style={styles.textStyle}>{this.props.name}</Text>
+                  <Text style={styles.textStyle} note>Home</Text>
                 </Body>
               </Left>
               <Right>
@@ -59,7 +59,7 @@ class UserHome extends Component {
             <CardItem>
 
               { this.props.name !== null ?
-                <Text>
+                <Text style={styles.textStyle}>
                   Name:{this.props.name}
                 </Text> : null }
 
@@ -67,7 +67,7 @@ class UserHome extends Component {
             <CardItem>
 
               { this.props.phone !== null ?
-                <Text>
+                <Text style={styles.textStyle}>
                   Phone:{this.props.phone}
                 </Text> : null }
 
@@ -75,7 +75,7 @@ class UserHome extends Component {
             <CardItem>
 
               { this.props.bio !== null ?
-                <Text>
+                <Text style={styles.textStyle}>
                   Bio:{this.props.bio}
                 </Text> : null }
 
@@ -154,6 +154,9 @@ const styles = {
       justifyContent: 'center',
       backgroundColor: '#2AC278',
       overflow: 'hidden',
+    },
+    textStyle: {
+      fontFamily: 'Ubuntu'
     }
 };
 

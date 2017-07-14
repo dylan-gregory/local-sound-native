@@ -107,7 +107,7 @@ const styles = {
   headline: {
     flex: 1,
     fontFamily: 'Baksoda',
-    fontSize: 50,
+    fontSize: 45,
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#F4F9E9'
@@ -121,14 +121,14 @@ const styles = {
     marginBottom: 15
   },
   paragraphText: {
-    fontFamily: 'Raleway',
-    fontSize: 20,
+    fontFamily: 'Ubuntu',
+    fontSize: 16,
     marginLeft: 10
   },
   accentText: {
     flex: 1,
     fontFamily: 'Baksoda',
-    fontSize: 45,
+    fontSize: 50,
     textAlign: 'center',
     marginTop: 15,
     marginBottom: 15,
