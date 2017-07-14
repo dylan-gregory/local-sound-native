@@ -36,7 +36,7 @@ const styles = {
     justifyContent: 'center',
     backgroundColor: '#BFCDE0',
     borderBottomWidth: 3,
-    borderBottomColor: '#A30026',
+    borderBottomColor: '#2AC278',
     borderRadius: 5,
     margin: 6,
     paddingHorizontal: 16,
@@ -52,9 +52,11 @@ const styles = {
   }
 };
 
-// Unused styles, as of now...
-// borderWidth: 2,
-// borderColor: '#79D2CA',
+// border could be this magenta? #A30026
+// or mystic seafoam(dark teal) #049085***
+// sonic grey #657C7B
+// surf green #ADD1B5
+// darker surf #2AC278***
 
 
 export { Button };

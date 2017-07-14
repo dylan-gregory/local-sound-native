@@ -37,13 +37,13 @@ const RouterComponent = () => {
         <Scene
           key="user_home"
           component={UserHome}
-          title="User Home"
+          title="Home"
           initial
         />
         <Scene
           key="user_info"
           component={UserInfo}
-          title="User Info"
+          title="Profile Info"
         />
       </Scene>
 

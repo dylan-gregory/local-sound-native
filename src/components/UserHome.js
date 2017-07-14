@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import OtherIcon from 'react-native-vector-icons/MaterialIcons'
 import { Container, Content, Header, Footer, FooterTab, Text, CardItem, Left, Body, Thumbnail, Right } from 'native-base';
 import { userProfileFetch, logoutUser } from '../actions';
 import { Card, CardSection, Button, Spinner } from './common';
@@ -37,6 +38,7 @@ class UserHome extends Component {
     return (
       <Container>
         <Content>
+          <Image source={require('../images/jesse-bass.jpg')} style={{ height: 300, width: null, flex: 1 }} />
           <Card>
             <CardItem>
               <Left>
@@ -49,13 +51,10 @@ class UserHome extends Component {
               <Right>
                 <Button style={styles.roundButton} onPress={this.onButtonPress.bind(this)}>
 
-                    <Icon name="edit" size={25} color="#333" />
+                    <OtherIcon name="settings" size={25} color="#333" />
 
                 </Button>
               </Right>
-            </CardItem>
-            <CardItem carBody>
-              <Image source={require('../images/waves.jpeg')} style={{ height: 220, width: null, flex: 1 }} />
             </CardItem>
             <CardItem>
 
@@ -92,6 +91,25 @@ class UserHome extends Component {
 
         </Content>
 
+        <Footer>
+          <FooterTab>
+
+            <Button style={styles.footerButton}>
+              <Icon name="home" size={25} color="#fff" />
+            </Button>
+            <Button style={styles.footerButton}>
+              <Icon name="search" size={25} color="#fff" />
+            </Button>
+            <Button style={styles.footerButton}>
+              <Icon name="group" size={25} color="#fff" />
+            </Button>
+            <Button style={styles.footerButton}>
+              <OtherIcon name="message" size={25} color="#fff" />
+            </Button>
+
+          </FooterTab>
+        </Footer>
+
       </Container>
 
     );
@@ -120,7 +138,15 @@ const styles = {
       height: 2,
       width: 0
     }
-  }
+  },
+    footerButton: {
+      flex: 1,
+      alignSelf: 'stretch',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#333',
+      overflow: 'hidden',
+    }
 };
 
 const mapStateToProps = state => {
