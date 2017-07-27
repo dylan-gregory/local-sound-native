@@ -3,7 +3,8 @@ import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import OtherIcon from 'react-native-vector-icons/MaterialIcons'
+import OtherIcon from 'react-native-vector-icons/MaterialIcons';
+import OtherOtherIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Container, Content, Header, Footer, FooterTab, Text, CardItem, Left, Body, Thumbnail, Right } from 'native-base';
 import { userProfileFetch, logoutUser } from '../actions';
 import { Card, CardSection, Button, Spinner } from './common';
@@ -41,14 +42,40 @@ class UserHome extends Component {
           <Image source={require('../images/jesse-bass.jpg')} style={{ height: 300, width: null, flex: 1 }} />
 
           <Card>
-            <Text>Upcoming Gigs/dates:</Text>
+            <CardItem style={{ backgroundColor: '#BFCDE0'}}>
+              <OtherOtherIcon
+                name="calendar-clock"
+                size={25}
+                color="#333"
+                style={{ marginRight: 10 }}
+                 />
+              <Text>Upcoming Gigs/dates:</Text>
+              <Right>
+                <OtherOtherIcon name="calendar-plus" size={25} color="#333" />
+              </Right>
+            </CardItem>
             <CardItem>
-              <Text>This will have gig/practice details in a list form</Text>
+              <Text>Sat, July 29 - 7:30PM | </Text>
+              <Text>Rehearsal with the guys | </Text>
+              <Text>Joe's house</Text>
+            </CardItem>
+            <CardItem>
+              <Text>Sun, July 30 - 5:30PM | </Text>
+              <Text>Wedding gig | </Text>
+              <Text>Botanical Gardens</Text>
             </CardItem>
           </Card>
 
           <Card>
-            <Text>Gear Gallery</Text>
+            <CardItem style={{ backgroundColor: '#BFCDE0'}}>
+              <OtherOtherIcon
+                name="guitar-electric"
+                size={35}
+                color="#333"
+                style={{ marginRight: 7 }}
+                />
+              <Text>Gear Gallery</Text>
+            </CardItem>
             <CardItem>
               <Text>This will either have photos of gear, or a placeholder box to click to upload some pics</Text>
             </CardItem>

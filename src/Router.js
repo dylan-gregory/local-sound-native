@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Image } from 'react-native';
 import { Scene, Router, Actions } from 'react-native-router-flux';
 import SplashPage from './components/SplashPage';
 import LoginForm from './components/LoginForm';
 import UserHome from './components/UserHome';
 import UserInfo from './components/UserInfo';
 import Groups from './components/Groups';
+
+// {<Image style={styles.logoStyle} source={require('./images/local-sound-ls.png')} />}
 
 const RouterComponent = () => {
   return(
@@ -13,7 +16,8 @@ const RouterComponent = () => {
       navigationBarStyle={{ backgroundColor: '#576AAC' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ fontFamily: 'Ubuntu', fontSize: 20, color: '#fff' }}
+      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu' }}
+
     >
 
             {/* add this prop to the scene to change the header font
@@ -58,6 +62,13 @@ const RouterComponent = () => {
 
     </Router>
   );
+};
+
+const styles = {
+  logoStyle: {
+    height: 10,
+    width: 10
+  }
 };
 
 
