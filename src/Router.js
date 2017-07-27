@@ -13,10 +13,10 @@ const RouterComponent = () => {
   return(
     <Router
       sceneStyle={{ paddingTop: 65, backgroundColor: '#333'}}
-      navigationBarStyle={{ backgroundColor: '#576AAC' }}
+      navigationBarStyle={{ backgroundColor: '#2AC4C0', justifyContent: 'center' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu' }}
+      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu', justifyContent: 'center' }}
 
     >
 
@@ -28,7 +28,11 @@ const RouterComponent = () => {
           key="splash"
           component={SplashPage}
           title="Local Sound"
-          titleStyle={{ fontFamily: 'Baksoda', fontSize: 30, letterSpacing: 3 }}
+          renderTitle={() =>
+            <Image
+              source={require('./images/local-sound-words.png')}
+              style={{ height: 40, width: 150, alignSelf: 'center', marginBottom: -15 }}
+            /> }
           initial
         />
         <Scene
@@ -73,6 +77,16 @@ const styles = {
 
 
 // COLORS:
+// seafoam: #B2FFD6****
+// darker seafoam: #60FBDB
+// yellow: #F2F19D
+// purple: #AF88D5
+// pink: #FF4057
+// peachy: FFAC81
+
+
+
+
 // cream: #FAEFCC
 // off black: #333
 // peachy: #DB6F59

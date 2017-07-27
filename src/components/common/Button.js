@@ -33,9 +33,9 @@ const styles = {
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#BFCDE0',
+    backgroundColor: '#EBEEDD',
     borderBottomWidth: 3,
-    borderBottomColor: '#576AAC',
+    borderBottomColor: '#2AC278',
     borderRadius: 5,
     margin: 6,
     paddingHorizontal: 16,
@@ -56,6 +56,15 @@ const styles = {
 // sonic grey #657C7B
 // surf green #ADD1B5
 // darker surf #2AC278***
+
+// lighter blue: BFCDE0
+// off white: #EBEEDD
+// teal: #2AC4C0
+// darker teal: #00A8A7
+// dark dark dark teal: #698888
+// peach: #FE9375
+// darker peach: #F4896A
+
 
 
 export { Button };

@@ -55,14 +55,35 @@ class UserHome extends Component {
               </Right>
             </CardItem>
             <CardItem>
-              <Text>Sat, July 29 - 7:30PM | </Text>
-              <Text>Rehearsal with the guys | </Text>
-              <Text>Joe's house</Text>
+              <Left>
+                <Body>
+                  <Text style={styles.dateTextStyle}>Sat, July 29 | </Text>
+                  <Text note>7:30PM</Text>
+                </Body>
+              </Left>
+              <Right>
+                <Body>
+                  <Text> Rehearsal with the guys</Text>
+                  <Text note>@ Joe's house</Text>
+                </Body>
+              </Right>
+
             </CardItem>
             <CardItem>
-              <Text>Sun, July 30 - 5:30PM | </Text>
-              <Text>Wedding gig | </Text>
-              <Text>Botanical Gardens</Text>
+              <Left>
+                <Body>
+                  <Text style={styles.dateTextStyle}>Sun, July 30 | </Text>
+                  <Text note>5:00PM</Text>
+                </Body>
+              </Left>
+
+              <Right>
+                <Body>
+                  <Text> Wedding gig</Text>
+                  <Text note>@ Botanical Gardens</Text>
+                </Body>
+              </Right>
+
             </CardItem>
           </Card>
 
@@ -70,14 +91,25 @@ class UserHome extends Component {
             <CardItem style={{ backgroundColor: '#BFCDE0'}}>
               <OtherOtherIcon
                 name="guitar-electric"
-                size={35}
+                size={30}
                 color="#333"
                 style={{ marginRight: 7 }}
                 />
               <Text>Gear Gallery</Text>
             </CardItem>
             <CardItem>
-              <Text>This will either have photos of gear, or a placeholder box to click to upload some pics</Text>
+              <Left>
+                <Image
+                  source={require('../images/polymath-pedalboard.jpg')}
+                  style={{ height: 160, width: 160, borderRadius: 20 }}
+                  />
+              </Left>
+              <Right>
+                <Image
+                  source={require('../images/polymath-keys.jpg')}
+                  style={{ height: 160, width: 160, borderRadius: 20 }}
+                  />
+              </Right>
             </CardItem>
           </Card>
 
@@ -204,6 +236,9 @@ const styles = {
       overflow: 'hidden',
     },
     textStyle: {
+      fontFamily: 'Ubuntu'
+    },
+    dateTextStyle: {
       fontFamily: 'Ubuntu'
     }
 };
