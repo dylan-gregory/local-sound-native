@@ -67,6 +67,7 @@
 		ED4FBD20A8294F86A3369B8D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F6E5502864054AC24FE9B /* SimpleLineIcons.ttf */; };
 		FCF78C9B1F192F3E003D7BF6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
 		FCF78CBA1F19302E003D7BF6 /* Brownhill Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E78975B091254B71A9AC0BC6 /* Brownhill Script.ttf */; };
+		AB552032522D4BAF9647418B /* Gloss_And_Bloom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6C79BE4A48F40E4B1DBE512 /* Gloss_And_Bloom.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +356,7 @@
 		D8A25728D5F3437199A8253E /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		E78975B091254B71A9AC0BC6 /* Brownhill Script.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Brownhill Script.ttf"; path = "../src/fonts/Brownhill Script.ttf"; sourceTree = "<group>"; };
 		F13C4E85A3904B68AB96F128 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		C6C79BE4A48F40E4B1DBE512 /* Gloss_And_Bloom.ttf */ = {isa = PBXFileReference; name = "Gloss_And_Bloom.ttf"; path = "../src/fonts/Gloss_And_Bloom.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 				E78975B091254B71A9AC0BC6 /* Brownhill Script.ttf */,
 				139F45C30EB944AD86A92D4C /* PARABOLA-Regular.otf */,
 				65AD276E258A40258AA715DA /* Ubuntu-Medium.ttf */,
+				C6C79BE4A48F40E4B1DBE512 /* Gloss_And_Bloom.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1085,6 +1088,7 @@
 				7B91076AE9DB4C11B6E0935B /* Black Animal.otf in Resources */,
 				541AEBBD589A4E479C0619A7 /* PARABOLA-Regular.otf in Resources */,
 				D43475A83EC04E03BE23C51F /* Ubuntu-Medium.ttf in Resources */,
+				AB552032522D4BAF9647418B /* Gloss_And_Bloom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

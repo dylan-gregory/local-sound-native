@@ -97,38 +97,44 @@ const styles = {
     marginTop: 5
   },
   backdropView: {
+    // justifyContent: 'center',
     padding: 5,
     paddingTop: 12,
     height: 130,
     width: 360,
-    backgroundColor: 'rgba(80,80,80,0.8)',
+    // alignItems: 'center',
+    // backgroundColor: 'rgba(80,80,80,0.8)',
+    backgroundColor: 'rgba(255,172,129,0.8)',
     borderRadius: 5
   },
   headline: {
     flex: 1,
-    fontFamily: 'Baksoda',
-    fontSize: 45,
+    fontFamily: 'GlossAndBloom',
+    lineHeight: 60,
+    // justifyContent: 'center',
+    fontSize: 30,
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#F4F9E9'
   },
   headerText: {
     flex: 1,
-    fontFamily: 'Baksoda',
-    fontSize: 50,
+    fontFamily: 'GlossAndBloom',
+    fontSize: 25,
+    lineHeight: 45,
     textAlign: 'center',
     marginTop: 15,
     marginBottom: 15
   },
   paragraphText: {
-    fontFamily: 'Ubuntu',
+    fontFamily: 'Raleway',
     fontSize: 16,
     marginLeft: 10
   },
   accentText: {
     flex: 1,
-    fontFamily: 'Baksoda',
-    fontSize: 50,
+    fontFamily: 'GlossAndBloom',
+    fontSize: 25,
     textAlign: 'center',
     marginTop: 15,
     marginBottom: 15,
