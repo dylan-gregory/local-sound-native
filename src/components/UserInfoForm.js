@@ -326,12 +326,12 @@ const styles = {
     flex: 1,
     textAlign: 'center',
     alignSelf: 'center',
-    fontFamily: 'Ubuntu',
+    // fontFamily: 'Raleway',
     fontSize: 20,
     marginLeft: 10
   },
   inputStyle: {
-    fontFamily: 'Ubuntu'
+    // fontFamily: 'Raleway'
   },
   instrumentButtonStyle: {
     flex: 1,

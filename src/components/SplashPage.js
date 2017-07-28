@@ -127,7 +127,7 @@ const styles = {
     marginBottom: 15
   },
   paragraphText: {
-    fontFamily: 'Raleway',
+    // fontFamily: 'Raleway',
     fontSize: 16,
     marginLeft: 10
   },

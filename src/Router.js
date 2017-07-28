@@ -16,7 +16,7 @@ const RouterComponent = () => {
       navigationBarStyle={{ backgroundColor: '#2AC4C0' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu' }}
+      titleStyle={{ color: 'black' }}
 
     >
 
@@ -77,37 +77,16 @@ const styles = {
 
 
 // COLORS:
-// seafoam: #B2FFD6****
+// seafoam: #2AC4C0****
 // darker seafoam: #60FBDB
 // yellow: #F0E5A6
 // purple: #AF88D5
 // pink: #FF4057
 // peachy: FFAC81
 // dark navy purple: #1E1F59
-//
-
-
+// lighter blue: #9EE4E2
 
 
 // cream: #FAEFCC
-// off black: #333
-// peachy: #DB6F59
-// light peachy: #FEE0D5
-// yellowy peach: #F8AA84
-// brownish peach: #DB995A
-// tealy: #00A5A5
-// lighter teal: #79D2CA
-// purpley: #576AAC
-// magenta-y: #AF506C
-// navy: #354370
-// maroon: #590925
 
-// purpley: #576AAC
-// different purple #5D5D81
-// darker purple #3B3355
-// light blue #BFCDE0
-// white-ish mint #F4F9E9
-// dark grey #B4B8AB
-// dark mint #71B48D
-// gold #FFC857
 export default RouterComponent;

@@ -42,16 +42,16 @@ class UserHome extends Component {
           <Image source={require('../images/jesse-bass.jpg')} style={{ height: 300, width: null, flex: 1 }} />
 
           <Card>
-            <CardItem style={{ backgroundColor: '#BFCDE0'}}>
+            <CardItem style={{ backgroundColor: '#FF4057', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
               <OtherOtherIcon
                 name="calendar-clock"
                 size={25}
-                color="#333"
+                color="#fff"
                 style={{ marginRight: 10 }}
                  />
-              <Text>Upcoming Gigs/dates:</Text>
+               <Text style={{ fontSize: 18, color: '#fff'}}>Upcoming Gigs/dates:</Text>
               <Right>
-                <OtherOtherIcon name="calendar-plus" size={25} color="#333" />
+                <OtherOtherIcon name="calendar-plus" size={25} color="#fff" style={{ backgroundColor: "#E83B50", padding: 10, margin: 0 }} />
               </Right>
             </CardItem>
             <CardItem>
@@ -61,7 +61,7 @@ class UserHome extends Component {
                   <Text note>7:30PM</Text>
                 </Body>
               </Left>
-              <Right>
+              <Right style={styles.locationStyle}>
                 <Body>
                   <Text> Rehearsal with the guys</Text>
                   <Text note>@ Joe's house</Text>
@@ -77,7 +77,7 @@ class UserHome extends Component {
                 </Body>
               </Left>
 
-              <Right>
+              <Right style={styles.locationStyle}>
                 <Body>
                   <Text> Wedding gig</Text>
                   <Text note>@ Botanical Gardens</Text>
@@ -88,14 +88,22 @@ class UserHome extends Component {
           </Card>
 
           <Card>
-            <CardItem style={{ backgroundColor: '#BFCDE0'}}>
+            <CardItem style={{ backgroundColor: '#FF4057', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
               <OtherOtherIcon
                 name="guitar-electric"
                 size={30}
-                color="#333"
+                color="#fff"
                 style={{ marginRight: 7 }}
                 />
-              <Text>Gear Gallery</Text>
+              <Text style={{ fontSize: 18, color: '#fff'}}>Gear Gallery</Text>
+              <Right>
+                <OtherIcon
+                  name="add-a-photo"
+                  size={25}
+                  color="#fff"
+                  style={{ backgroundColor: "#E83B50", padding: 12, margin: 0 }}
+                />
+              </Right>
             </CardItem>
             <CardItem>
               <Left>
@@ -204,7 +212,7 @@ const styles = {
     height: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#AF506C',
+    backgroundColor: '#B189D0',
     borderRadius: 30,
     margin: 6,
     paddingHorizontal: 10,
@@ -232,14 +240,19 @@ const styles = {
       alignSelf: 'stretch',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#2AC278',
+      backgroundColor: '#2AC4C0',
       overflow: 'hidden',
     },
     textStyle: {
-      fontFamily: 'Ubuntu'
+      // fontFamily: 'Raleway'
     },
     dateTextStyle: {
-      fontFamily: 'Ubuntu'
+      // fontFamily: 'Raleway',
+      fontWeight: 'bold'
+    },
+    locationStyle: {
+      marginLeft: 0,
+      paddingLeft: 0
     }
 };
 

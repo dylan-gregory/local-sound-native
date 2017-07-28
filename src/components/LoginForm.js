@@ -105,21 +105,21 @@ const styles = {
   },
   headerText: {
     flex: 1,
-    fontFamily: 'Baksoda',
+    fontFamily: 'GlossAndBloom',
     fontSize: 50,
     textAlign: 'center',
     marginTop: 15,
     marginBottom: 15
   },
   paragraphText: {
-    fontFamily: 'Ubuntu',
+    // fontFamily: 'Raleway',
     fontSize: 16,
     marginLeft: 10
   },
   accentText: {
     flex: 1,
-    fontFamily: 'Baksoda',
-    fontSize: 45,
+    fontFamily: 'GlossAndBloom',
+    fontSize: 30,
     textAlign: 'center',
     marginTop: 15,
     marginBottom: 15,
