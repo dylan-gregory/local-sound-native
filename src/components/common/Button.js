@@ -33,9 +33,9 @@ const styles = {
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#EBEEDD',
+    backgroundColor: '#F0E5A6',
     borderBottomWidth: 3,
-    borderBottomColor: '#2AC278',
+    borderBottomColor: '#FF4057',
     borderRadius: 5,
     margin: 6,
     paddingHorizontal: 16,
@@ -59,7 +59,7 @@ const styles = {
 
 // lighter blue: BFCDE0
 // off white: #EBEEDD
-// teal: #2AC4C0
+// teal: #2AC4C0****
 // darker teal: #00A8A7
 // dark dark dark teal: #698888
 // peach: #FE9375

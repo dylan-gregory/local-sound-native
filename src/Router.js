@@ -13,10 +13,10 @@ const RouterComponent = () => {
   return(
     <Router
       sceneStyle={{ paddingTop: 65, backgroundColor: '#333'}}
-      navigationBarStyle={{ backgroundColor: '#2AC4C0', justifyContent: 'center' }}
+      navigationBarStyle={{ backgroundColor: '#2AC4C0' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
-      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu', justifyContent: 'center' }}
+      titleStyle={{ color: '#fff', fontFamily: 'Ubuntu' }}
 
     >
 
@@ -31,7 +31,7 @@ const RouterComponent = () => {
           renderTitle={() =>
             <Image
               source={require('./images/local-sound-words.png')}
-              style={{ height: 40, width: 150, alignSelf: 'center', marginBottom: -15 }}
+              style={{ height: 40, width: 150, alignSelf: 'center', marginTop: 20 }}
             /> }
           initial
         />
@@ -79,10 +79,12 @@ const styles = {
 // COLORS:
 // seafoam: #B2FFD6****
 // darker seafoam: #60FBDB
-// yellow: #F2F19D
+// yellow: #F0E5A6
 // purple: #AF88D5
 // pink: #FF4057
 // peachy: FFAC81
+// dark navy purple: #1E1F59
+//
 
 
 
