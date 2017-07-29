@@ -42,7 +42,7 @@ class UserHome extends Component {
           <Image source={require('../images/jesse-bass.jpg')} style={{ height: 300, width: null, flex: 1 }} />
 
           <Card>
-            <CardItem style={{ backgroundColor: '#FF4057', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
+            <CardItem style={{ backgroundColor: '#DF5F60', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
               <OtherOtherIcon
                 name="calendar-clock"
                 size={25}
@@ -51,7 +51,7 @@ class UserHome extends Component {
                  />
                <Text style={{ fontSize: 18, color: '#fff'}}>Upcoming Gigs/dates:</Text>
               <Right>
-                <OtherOtherIcon name="calendar-plus" size={25} color="#fff" style={{ backgroundColor: "#E83B50", padding: 10, margin: 0 }} />
+                <OtherOtherIcon name="calendar-plus" size={25} color="#fff" style={{ backgroundColor: "#CB5758", padding: 10, margin: 0 }} />
               </Right>
             </CardItem>
             <CardItem>
@@ -88,7 +88,7 @@ class UserHome extends Component {
           </Card>
 
           <Card>
-            <CardItem style={{ backgroundColor: '#FF4057', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
+            <CardItem style={{ backgroundColor: '#DF5F60', paddingTop: 0, paddingBottom: 0, paddingRight: 0 }}>
               <OtherOtherIcon
                 name="guitar-electric"
                 size={30}
@@ -101,7 +101,7 @@ class UserHome extends Component {
                   name="add-a-photo"
                   size={25}
                   color="#fff"
-                  style={{ backgroundColor: "#E83B50", padding: 12, margin: 0 }}
+                  style={{ backgroundColor: "#CB5758", padding: 12, margin: 0 }}
                 />
               </Right>
             </CardItem>
@@ -212,7 +212,7 @@ const styles = {
     height: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#B189D0',
+    backgroundColor: '#E9BB6E',
     borderRadius: 30,
     margin: 6,
     paddingHorizontal: 10,
@@ -240,7 +240,7 @@ const styles = {
       alignSelf: 'stretch',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#2AC4C0',
+      backgroundColor: '#2A4D57',
       overflow: 'hidden',
     },
     textStyle: {

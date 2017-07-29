@@ -94,7 +94,7 @@ const styles = {
     width: null,
     height: 600,
     alignItems: 'center',
-    marginTop: 5
+    // marginTop: 5
   },
   backdropView: {
     // justifyContent: 'center',
@@ -103,8 +103,8 @@ const styles = {
     height: 130,
     width: 360,
     // alignItems: 'center',
-    // backgroundColor: 'rgba(80,80,80,0.8)',
-    backgroundColor: 'rgba(255,172,129,0.8)',
+    backgroundColor: 'rgba(80,80,80,0.8)',
+    // backgroundColor: 'rgba(33,33,33,0.8)',
     borderRadius: 5
   },
   headline: {
@@ -115,7 +115,7 @@ const styles = {
     fontSize: 30,
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
-    color: '#F4F9E9'
+    color: '#FAEFCC'
   },
   headerText: {
     flex: 1,

@@ -13,7 +13,7 @@ const RouterComponent = () => {
   return(
     <Router
       sceneStyle={{ paddingTop: 65, backgroundColor: '#333'}}
-      navigationBarStyle={{ backgroundColor: '#2AC4C0' }}
+      navigationBarStyle={{ backgroundColor: '#34B0A1' }}
       barButtonIconStyle={{ tintColor: '#fff' }}
       rightButtonTextStyle={{ color: '#fff' }}
       titleStyle={{ color: 'black' }}
@@ -77,12 +77,29 @@ const styles = {
 
 
 // COLORS:
-// seafoam: #2AC4C0****
-// darker seafoam: #60FBDB
+
+////// Darker ///////
+// dark teal: #2A4D57
+// light teal: #34B0A1
+// dark navy: #253044
+//// accent colors
+// gold: #E9BB6E
+// coral: #DF5F60
+
+
+
+//////// 80's/La Croix ////////
+// seafoam: #12BDCC****
+// darker seafoam: #60FBDB -- old color
 // yellow: #F0E5A6
-// purple: #AF88D5
+// light purple: #AF88D5
+// lighter purple: #B2ABCD
+// dark purple: #2C1A77
 // pink: #FF4057
 // peachy: FFAC81
+// blue: #0057A7
+// lighter blue: #93E1E7
+
 // dark navy purple: #1E1F59
 // lighter blue: #9EE4E2
 
