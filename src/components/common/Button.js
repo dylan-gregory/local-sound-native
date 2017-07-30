@@ -20,7 +20,7 @@ const styles = {
   textStyle: {
     // fontFamily: 'Raleway',
     alignSelf: 'center',
-    color: '#FAEFCC',
+    color: '#333',
     fontSize: 16,
     fontWeight: '600',
     paddingTop: 10,
@@ -34,7 +34,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: '#A2DBD4',
-    backgroundColor: '#3D5D66',
+    backgroundColor: '#B5E2DC',
     borderBottomWidth: 3,
     borderBottomColor: '#34B0A1',
     borderRadius: 5,

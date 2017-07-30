@@ -133,7 +133,7 @@ class UserHome extends Component {
               <Right>
                 <Button style={styles.roundButton} onPress={this.onButtonPress.bind(this)}>
 
-                    <OtherIcon name="settings" size={25} color="#333" />
+                    <OtherIcon name="settings" size={20} color="#333" />
 
                 </Button>
               </Right>
@@ -215,10 +215,11 @@ const styles = {
     backgroundColor: '#E9BB6E',
     borderRadius: 30,
     margin: 6,
-    paddingHorizontal: 10,
-    paddingTop: 5,
-    overflow: 'hidden',
-    // paddingVertical: 5,
+    paddingHorizontal: 12,
+    // paddingTop: 10,
+    // paddingBottom: 10,
+    // overflow: 'hidden',
+    paddingVertical: 5,
     shadowColor: "black",
     shadowOpacity: 0.3,
     shadowRadius: 2,
